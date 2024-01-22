@@ -1,0 +1,20 @@
+.home{
+    width: 100vw;
+    height: 100vh;
+    .banner-container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        video{
+            height: 100%;
+            width: 100% !important;
+            object-fit: contain;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+    }
+    
+    
+}

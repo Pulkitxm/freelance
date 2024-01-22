@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;1,6..96,600&family=Cedarville+Cursive&display=swap');
+
+
+@media (width>1200px) {
+    .navbar{
+        height: 6rem;
+        padding: 0 2em;
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height:5em;
+                width:5em;
+            }          
+            .txt p{
+                font-size:2em;
+            }            
+        }
+        .navigators{
+            font-size: 1.7em;
+        }
+    }
+}
+
+@media (width>=780px) and (width<1200px) {
+    .navbar{
+        height: 3.5rem;
+    }
+}
+
+@media (width<780px) {
+    .navbar{
+        height: 3.5rem;
+    }
+
+    .logo{
+
+        .txt p{
+            font-size: 5em;
+        }
+        
+    }
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1em;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 5;
+    transition: color  0.1s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.navbar .logo{
+    display: flex;
+    
+    .txt{
+        font-family: "Bodoni Moda", serif;
+    }
+
+    .txt p{
+        margin: 0;
+        padding: 0;
+        line-height: 1em;
+    }
+}
+
+.navbar .navigators{
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
