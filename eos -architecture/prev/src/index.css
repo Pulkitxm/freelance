@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.app{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.loading{
+    width:50px;
+    height:50px;
+    background-color: #000000a6;
+    border-radius: 50%;
+    animation: load 1s infinite alternate;
+}
+
+@keyframes load{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

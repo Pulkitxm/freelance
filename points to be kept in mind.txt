@@ -1,0 +1,16 @@
+this is a website related to architecture
+features 
+- free from cement
+- conduct workshops
+
+design inspiration
+https://www.dhun.life/
+https://indigodesign.in/
+
+nav to be fixed
+parllax effect
+testimonials auto move carousel
+given a sketch(stars moving on it as on https://indigodesign.in)
+
+
+eosdesign.studio
