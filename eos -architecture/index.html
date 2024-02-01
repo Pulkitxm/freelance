@@ -16,13 +16,13 @@
 <body>
   <nav>
     <a href="/" class="logo">
-      <img src="./assets/logo.png" alt="logo">
+      <img loading="lazy" src="./assets/logo.png" alt="logo">
       <div class="title" id="title">
         <p>eos</p>
         <p>architecture</p>
       </div>
     </a>
-    <ul>
+    <ul class="collapsible" >
       <li>
         <p data-link="home" class="navigators">home</p>
       </li>
@@ -45,6 +45,10 @@
         <p data-link="contact" class="navigators">contact us</p>
       </li>
     </ul>
+    <div class="ham">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+    </div>
   </nav>
   <div class="app">
     <section class="home" id="home">
