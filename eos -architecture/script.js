@@ -187,15 +187,7 @@ makeTeamElements();
 makeReviewsElements();
 window.addEventListener('resize', handleResize);
 handleResize();
-if (window.innerWidth < 1270) {
-    window.addEventListener('click', (event) => {
-        const navElement = document.querySelector(".collapsible");
-        if (navElement.classList.contains("open-nav")) {
-            ham.click();
-            console.log('click');
-        }
-    });
-}
+
 // appElement.scrollTo({
 //     top: document.querySelector('.products').getBoundingClientRect().top,
 // });
