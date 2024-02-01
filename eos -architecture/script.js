@@ -9,14 +9,12 @@ const homeHeight = homeElement.clientHeight;
 const navigators = document.querySelectorAll('.navigators');
 const ham = document.querySelector('.ham');
 
-window.addEventListener("load",() => {
+window.addEventListener("load", () => {
+    document.querySelector('#loading').style.opacity = '0';
+    document.querySelector('#loading').style.zIndex = '0';
     setTimeout(() => {
-        document.querySelector('#loading').style.opacity = '0';
-        document.querySelector('#loading').style.zIndex = '0';
-        setTimeout(() => {
-            document.querySelector('#loading').style.display = 'none';
-        }, 1100);
-    }, 2000);
+        document.querySelector('#loading').style.display = 'none';
+    }, 1100);
 })
 
 const handleScroll = () => {
@@ -144,7 +142,7 @@ const closeSmallNav = () => {
     navElement.querySelector(".collapsible").classList.remove("open-nav");
 
 }
-const handleSmallNavOpen= () => {
+const handleSmallNavOpen = () => {
     ham.addEventListener('click', () => {
         ham.classList.toggle('open');
         if (ham.classList.contains('open')) {
@@ -155,7 +153,7 @@ const handleSmallNavOpen= () => {
     })
 }
 const handleResize = () => {
-    if(window.innerWidth < 1270){
+    if (window.innerWidth < 1270) {
         ham.style.display = 'block';
         closeSmallNav();
         navElement.querySelector(".collapsible").style.top = navElement.getBoundingClientRect().height + 10 + 'px';
@@ -170,7 +168,7 @@ const handleResize = () => {
                 }
             })
         })
-    } else{
+    } else {
         ham.style.display = "none";
         navElement.querySelector(".collapsible").style.display = 'flex';
         navElement.style.width = `calc(100vw - ${slidebarWidth}px)`;
@@ -191,13 +189,13 @@ window.addEventListener('resize', handleResize);
 handleResize();
 if (window.innerWidth < 1270) {
     window.addEventListener('click', (event) => {
-      const navElement = document.querySelector(".collapsible");
+        const navElement = document.querySelector(".collapsible");
         if (navElement.classList.contains("open-nav")) {
             ham.click();
             console.log('click');
         }
     });
-  }
+}
 // appElement.scrollTo({
 //     top: document.querySelector('.products').getBoundingClientRect().top,
 // });
