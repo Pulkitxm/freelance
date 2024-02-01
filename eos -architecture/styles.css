@@ -33,6 +33,43 @@ p {
   perspective: var(--perspectiveVal);
 }
 
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: .8;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h2{
+    transform: translateY(-50px);
+  }
+  div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    animation: bounce 1s infinite;
+  }
+  align-items: center;
+  color: #fff;
+  transition: 1s;
+}
+
 nav {
   z-index: 1;
   position: fixed;
@@ -332,9 +369,9 @@ nav {
 
       img {
         margin-top: 2em;
-                width: 80%;
+        width: 80%;
         border-radius: 1em;
-        }
+      }
 
     }
 
@@ -441,7 +478,7 @@ nav {
     .right {
       width: 50%;
 
-      b{
+      b {
         font-size: 1.5em;
       }
     }
@@ -451,13 +488,15 @@ nav {
 
 }
 
-#reviews{
+#reviews {
   display: flex !important;
   margin-top: 2em;
-.review{
+
+  .review {
     margin: 1em;
   }
 }
+
 #arrowUp {
   position: fixed;
   bottom: 2em;

@@ -9,6 +9,16 @@ const homeHeight = homeElement.clientHeight;
 const navigators = document.querySelectorAll('.navigators');
 const ham = document.querySelector('.ham');
 
+window.addEventListener("load",() => {
+    setTimeout(() => {
+        document.querySelector('#loading').style.opacity = '0';
+        document.querySelector('#loading').style.zIndex = '0';
+        setTimeout(() => {
+            document.querySelector('#loading').style.display = 'none';
+        }, 1100);
+    }, 2000);
+})
+
 const handleScroll = () => {
     const scrollPosition = appElement.scrollTop;
     if (scrollPosition < homeHeight) {
@@ -54,17 +64,20 @@ const handleScollUp = () => {
     });
 };
 const navigate = (e) => {
-    if (e.target.dataset.link == 'home') {
+    if (e.target.dataset.link === 'home') {
         return appElement.scrollTo({
             top: 0,
             behavior: "smooth",
         });
     }
+
     const element = document.getElementById(e.target.dataset.link);
+
     if (element) {
-        appElement.scrollTo({
-            top: element.getBoundingClientRect().top,
+        element.scrollIntoView({
             behavior: "smooth",
+            block: "start",
+            inline: "nearest"
         });
     }
 }
@@ -179,16 +192,12 @@ handleResize();
 if (window.innerWidth < 1270) {
     window.addEventListener('click', (event) => {
       const navElement = document.querySelector(".collapsible");
-    //   if (!navElement.contains(event.target)) {
         if (navElement.classList.contains("open-nav")) {
             ham.click();
             console.log('click');
         }
-    //   }
     });
   }
-  
-
 // appElement.scrollTo({
 //     top: document.querySelector('.products').getBoundingClientRect().top,
 // });
