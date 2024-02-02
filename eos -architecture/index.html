@@ -3,7 +3,7 @@
 
 <head>
   <title>Eos-Architecture</title>
-  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/logo.webp" type="image/x-icon">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +16,13 @@
 <body>
   <div id="loading">
     <div>
-      <img src="./assets/logo.png" alt="">
+      <img src="./assets/logo.webp" alt="">
       <h2>Eos-Architecture</h2>
     </div>
   </div>
   <nav>
     <a href="/" class="logo">
-      <img src="./assets/logo.png" alt="logo">
+      <img src="./assets/logo.webp" alt="logo">
       <div class="title" id="title">
         <p>eos</p>
         <p>architecture</p>
@@ -57,14 +57,15 @@
     </div>
   </nav>
   <div class="app">
+
     <section class="home" id="home">
-      <video src="./assets/banner.mp4" autoplay muted loop class="background"></video>
+      <video src="./assets/banner.mp4" oncontextmenu="return false;" autoplay muted loop class="background"
+        id="bg-video"></video>
       <div class="desc">
         <p>Natural building is an artform</p>
         <p>We are all artists at eos design studio and we invite you to </p>
         <p>get your hands muddy!</p>
       </div>
-      <div class="overlay"></div>
       <div class="arrow">
         <svg width="50px" height="50px" viewBox="0 -19.04 75.804 75.804" id="arrow">
           <g id="Group_67" data-name="Group 67" transform="translate(-798.203 -587.815)">
@@ -84,12 +85,16 @@
 
       <div class="desc">
         <div class="txt">
-          <p>We are an architecture studio with a twist</p>
-          <p>Our mission is to spread awareness anout naturaal</p>
-          <p>building through work and build community while</p>
-          <p>we are at it.</p>
+          <p>
+            We are an architecture studio with a twist
+            Our mission is to spread awareness anout naturaal
+            building through work and build community while
+            we are at it.
+          </p>
         </div>
-        <div class="sketch"></div>
+        <div class="sketch">
+          <img src="./assets/sketch.webp" draggable="false" alt="...">
+        </div>
       </div>
 
       <h2>
@@ -111,16 +116,16 @@
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./assets/worksops-1.jpg" draggable="false" class="d-block w-100" alt="...">
+            <img src="./assets/worksops-1.webp" draggable="false" class="d-block" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./assets/worksops-2.jpg" draggable="false" class="d-block w-100" alt="...">
+            <img src="./assets/worksops-2.webp" draggable="false" class="d-block" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./assets/worksops-3.jpg" draggable="false" class="d-block w-100" alt="...">
+            <img src="./assets/worksops-3.webp" draggable="false" class="d-block" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./assets/worksops-4.jpg" draggable="false" class="d-block w-100" alt="...">
+            <img src="./assets/worksops-4.webp" draggable="false" class="d-block" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -145,14 +150,14 @@
       <h1>Projects</h1>
       <div class="align">
         <div class="left">
+          <img src="./assets/hut.webp" alt="">
           <h5>Studio Eos</h5>
-          <img src="./assets/hut.jpg" alt="">
         </div>
         <div class="right">
+          <img src="./assets/forest.webp" alt="">
           <h5>Ashreya at Yaksha Forest Graden</h5>
-          <img src="./assets/forest.jpg" alt="">
+          <img src="./assets/cafe.webp" alt="">
           <h5>Neembagh Cafe</h5>
-          <img src="./assets/cafe.jpg" alt="">
         </div>
       </div>
     </section>
@@ -161,14 +166,14 @@
       <h1>Community</h1>
       <div class="align">
         <div class="left">
-          <img src="./assets/community.jpg" alt="">
+          <img src="./assets/community.webp" alt="">
           <p>We belive in connecting like minded people</p>
         </div>
         <div class="right">
           <h2>Meet the team</h2>
           <div class="team-items">
             <div class="team-item">
-              <img src="./assets/team/1.jpg" class="team-face" alt="">
+              <img src="./assets/team/1.webp" class="team-face" alt="">
               <div class="name">sadsadasd</div>
             </div>
           </div>
@@ -180,7 +185,7 @@
       <h1>Products</h1>
       <div class="align">
         <div class="left">
-          <img src="./assets/project.jpg" alt="">
+          <img src="./assets/project.webp" alt="">
         </div>
         <div class="right">
           <h3>Natural pigments</h3>
@@ -198,14 +203,14 @@
         <div class="left">
           <div>
             <a href="https://www.instagram.com/eosdesign.studio/" target="_blank">
-              <img src="./assets/insta.png" alt="">
+              <img src="./assets/insta.webp" alt="">
             </a>
             <a href="https://www.instagram.com/eosdesign.studio/" target="_blank">
               <p>@eosdeign.studio</p>
             </a>
           </div>
           <div>
-            <img src="./assets/wa.jpg" alt="">
+            <img src="./assets/wa.webp" alt="">
             <p>+91 9509028478</p>
           </div>
         </div>
@@ -220,29 +225,17 @@
           <br>
         </div>
       </div>
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active reviews" id="reviews">
-            <div class="card review" style="width: 18rem;">
-              <div class="card-body">
-                <p class="card-text">
-                  a
-                </p>
-              </div>
-              <div class="card-footer">
-                a
-              </div>
-            </div>
+      <div class="testimonials">
+        <div class="card review">
+          <div class="card-body">
+            <p class="card-text">
+              a
+            </p>
+          </div>
+          <div class="card-footer">
+            a
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </section>
 

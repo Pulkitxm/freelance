@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;1,6..96,600&family=Cedarville+Cursive&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;1,6..96,600&family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 
 body {
   margin: 0;
@@ -16,11 +16,6 @@ a {
   /* color: #000; */
 }
 
-p {
-  /* margin: 0;
-  padding: 0; */
-}
-
 :root {
   --perspectiveVal: 10px;
   --perspectiveValNag: -10px;
@@ -28,38 +23,25 @@ p {
 
 .app {
   height: 100vh;
+  scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: var(--perspectiveVal);
-}
-
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: .8;
-  }
-
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
 }
 
 #loading {
   width: 100vw;
   height: 100vh;
   background-color: #000;
-  z-index: 100;
+  z-index: 2;
   position: absolute;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  h2{
+  h2 {
     transform: translateY(-50px);
   }
-  div{
+  div {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -79,12 +61,85 @@ nav {
   max-height: 5em;
   display: flex;
   align-items: center;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   justify-content: space-between;
 
   .logo {
     color: #fff;
-    opacity: .7;
+    opacity: 0.7;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 20%;
+    font-family: "Bodoni Moda", serif;
+
+    img {
+      width: 70px;
+    }
+  }
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+:root {
+  --perspectiveVal: 10px;
+  --perspectiveValNag: -10px;
+}
+
+.app {
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: var(--perspectiveVal);
+}
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    transform: translateY(-50px);
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    animation: bounce 1s infinite;
+  }
+  align-items: center;
+  color: #fff;
+  transition: 1s;
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  padding: 0 2em 0 5em;
+  top: 0;
+  width: 100%;
+  max-height: 5em;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  justify-content: space-between;
+
+  .logo {
+    color: #fff;
+    opacity: 0.7;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -97,20 +152,19 @@ nav {
     }
 
     .title {
-      opacity: .7;
-      line-height: .2em;
+      opacity: 0.7;
+      line-height: 0.2em;
       font-size: 1.8em;
     }
-
   }
 
   ul.open {
     z-index: 10;
-    animation: show .5s forwards;
+    animation: show 0.5s forwards;
   }
 
   ul.close {
-    animation: hide .3s forwards;
+    animation: hide 0.3s forwards;
   }
 
   ul {
@@ -148,7 +202,7 @@ nav {
       font-family: "Cedarville Cursive", cursive;
       font-size: 1.5em;
       font-weight: 900;
-      opacity: .7;
+      opacity: 0.7;
     }
 
     li {
@@ -181,7 +235,7 @@ nav {
 
     .line-1,
     .line-2 {
-      transition: transform .3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
   }
 
@@ -194,7 +248,6 @@ nav {
       transform: rotate(45deg) translate(-8px, -8px);
     }
   }
-
 }
 
 .home {
@@ -251,13 +304,21 @@ nav {
 }
 
 .about {
-  padding: 5em;
-  background-color: #ffffff;
-
-  h1 {
-    font-size: 3rem;
-    font-family: "Cedarville Cursive", cursive;
+  @media (min-width: 700px) {
+    padding: 5em;
+    h1 {
+      font-size: 3rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
   }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    padding: 1em;
+  }
+  background-color: #ffffff;
 
   h2 {
     font-size: 2rem;
@@ -269,196 +330,315 @@ nav {
     justify-content: space-between;
 
     .txt {
-      p {
-        line-height: .2em;
-      }
+      width: 50%;
     }
 
     .sketch {
-      background: url('./assets/sketch.jpg');
       background-size: cover;
-      height: 450px;
-      width: 700px;
+      width: 50%;
       margin: 0;
-      transform: translate(-20%, -15%);
+      img {
+        width: 80%;
+      }
     }
   }
-
 }
 
 .workshops {
-  padding: 5em;
-  background-color: #ffffff;
-
-  h1 {
-    font-size: 3rem;
-    font-family: "Cedarville Cursive", cursive;
-  }
-
-  #carouselExampleAutoplaying {
-    width: 80%;
-    margin: 4em auto;
-
-    .carousel-inner {
-      border-radius: 1em;
-      height: 30em;
-      box-shadow: 2px 2px 20px #000000a4;
-    }
-
-  }
-
-}
-
-.projects {
-  padding: 5em;
-  background-color: #ffffff;
-
-  h1 {
-    font-size: 3rem;
-    font-family: "Cedarville Cursive", cursive;
-  }
-
-  .align {
-    margin-top: 3em;
-    display: flex;
-
-    .left {
-      width: 50%;
-
-      img {
-        margin-top: 2em;
-        width: 60%;
-        border-radius: 1em;
-        overflow: hidden;
-
-        img {
-          width: 60%;
-        }
-      }
-    }
-
-    .right {
-      width: 50%;
-
-      img {
-        margin-top: 2em;
-        width: 60%;
-        border-radius: 1em;
-      }
-    }
-
-  }
-
-}
-
-.commuity {
-  padding: 5em;
-  background-color: #ffffff;
-
-
-  .align {
-    display: flex;
-
+  @media (min-width: 700px) {
+    padding: 5em;
     h1 {
       font-size: 3rem;
       font-family: "Cedarville Cursive", cursive;
     }
+  }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    padding: 1em;
+  }
+  background-color: #ffffff;
 
+  #carouselExampleAutoplaying {
+    @media (min-width: 1270px) {
+      width: 60%;
+      height: 35em;
+    }
+    @media (min-width: 700px) and (max-width: 1270px) {
+      width: 100%;
+      height: 27em;
+    }
+    @media (max-width: 700px) {
+      width: 100%;
+      height: 20em;
+    }
+    margin: 1em auto;
+
+    .carousel-inner {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      border-radius: 1em;
+      box-shadow: 2px 2px 20px #000000a4;
+      .carousel-item,
+      .carousel-item img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.projects {
+  @media (min-width: 700px) {
+    padding: 5em;
+    h1 {
+      font-size: 3rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+  }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    padding: 1em;
+  }
+  background-color: #ffffff;
+
+  .align {
+    margin-top: 3em;
+    display: flex;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
 
     .left {
-      width: 50%;
+      @media (max-width: 700px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+      }
+      @media (min-width: 700px) {
+        width: 50%;
+      }
 
       img {
         margin-top: 2em;
-        width: 80%;
+        @media (min-width: 700px) {
+          width: 60%;
+          height: 50%;
+          img {
+            width: 60%;
+          }
+        }
+        @media (max-width: 700px) {
+          width: 90%;
+          margin: auto;
+        }
         border-radius: 1em;
+        overflow: hidden;
       }
-
     }
 
     .right {
-      width: 50%;
+      @media (max-width: 700px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+        img {
+          margin-top: 2em;
+          width: 90%;
+          border-radius: 1em;
+          margin: auto;
+        }
+      }
+      @media (min-width: 700px) {
+        width: 50%;
+        img {
+          margin-top: 2em;
+          width: 100%;
+          border-radius: 1em;
+        }
+      }
+    }
+  }
+}
 
+.commuity {
+  @media (min-width: 700px) {
+    padding: 5em;
+    h1 {
+      font-size: 3rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+  }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    padding: 1em;
+  }
+  background-color: #ffffff;
+  .align {
+    @media (min-width: 700px) {
+      display: flex;
+      .left,
+      .right {
+        width: 50%;
+      }
+      .left {
+        img {
+          width: 80%;
+        }
+      }
+    }
+    @media (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .left {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .left {
+      img {
+        margin-top: 2em;
+        border-radius: 1em;
+      }
+    }
+
+    .right {
       .team-items {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
         .team-item {
-          margin: 1em;
+          @media (min-width: 700px) {
+            margin: 1em;
+          }
+          @media (max-width: 700px) {
+            margin: 1em 0.5em;
+          }
 
           .team-face {
             width: 110px;
             height: 100px;
             border-radius: 50%;
           }
-
           .name {
             text-align: center;
           }
-
         }
-
       }
     }
-
   }
-
-
 }
 
 .products {
-  padding: 5em;
-  background-color: #ffffff;
-
-
-  .align {
-    display: flex;
-
+  @media (min-width: 700px) {
+    padding: 5em;
     h1 {
       font-size: 3rem;
       font-family: "Cedarville Cursive", cursive;
     }
+    .align {
+      display: flex;
+      .left,
+      .right {
+        width: 50%;
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    padding: 1em;
+    .align {
+      display: flex;
+      flex-direction: column;
+      .left,
+      .right {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  background-color: #ffffff;
 
-
+  .align {
     .left {
-      width: 50%;
-
       img {
-        margin-top: 2em;
-        width: 80%;
+        margin: 1em 0;
         border-radius: 1em;
       }
-
     }
-
-    .right {
-      width: 50%;
-    }
-
   }
-
-
 }
 
 .contact {
-  padding: 5em;
+  @media (min-width: 700px) {
+    padding: 5em;
+    h1 {
+      font-size: 3rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    .align {
+      display: flex;
+      .left,
+      .right {
+        width: 50%;
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    padding: 1em;
+    .align {
+      display: flex;
+      flex-direction: column;
+      .left,
+      .right {
+        width: 100%;
+        margin: 0.5em 0;
+      }
+    }
+  }
   background-color: #ffffff;
 
-  h1 {
-    font-size: 3rem;
-    font-family: "Cedarville Cursive", cursive;
-  }
-
   .align {
-    display: flex;
-
     margin-top: 3em;
-
-    /* padding: 0 10em; */
     .left {
-      width: 50%;
-
       div {
         display: flex;
         align-items: center;
@@ -473,20 +653,33 @@ nav {
           color: #000;
         }
       }
-
     }
-
     .right {
-      width: 50%;
-
       b {
         font-size: 1.5em;
       }
     }
-
   }
-
-
+  .testimonials {
+    padding: 5em;
+    display: flex !important;
+    overflow-x: auto;
+    h1 {
+      font-size: 3rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    .review {
+      margin: 1em;
+      width: 100px;
+      /* height: 10px; */
+      border: solid 2px #bfbdbd;
+      border-radius: 10px;
+      .footer {
+        padding: 1em;
+        background-color: #ececec;
+      }
+    }
+  }
 }
 
 #reviews {
@@ -506,28 +699,28 @@ nav {
   width: 50px;
   cursor: pointer;
   transition: 1s;
+  box-shadow: 2px 2px 50px #ffffffa2;
 }
 
 #arrowUp svg {
-  transition: .2s;
+  transition: 0.2s;
 }
 
 #arrowUp svg:hover {
-  transition: .2s;
-  transform: scale(1.2);
+  transition: 0.2s;
 }
 
 #arrowUp svg:active {
-  transition: .3s;
-  transform: scale(.9);
+  transition: 0.3s;
+  transform: scale(0.9);
 }
 
 .hide {
-  animation: hideDown .5s forwards;
+  animation: hideDown 0.5s forwards;
 }
 
 .show {
-  animation: showUp .5s forwards;
+  animation: showUp 0.5s forwards;
 }
 
 @keyframes hideDown {
@@ -613,5 +806,17 @@ nav {
   100% {
     opacity: 0;
     transform: translateY(20px);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
   }
 }
