@@ -168,7 +168,7 @@ try {
     makeReviewsElements();
 } catch (err) { }
 
-appElement && appElement.scrollTo({
-    top: document.getElementById('contact').getBoundingClientRect().top,
-    behavior: "smooth"
-});
+// appElement && appElement.scrollTo({
+//     top: document.getElementById('contact').getBoundingClientRect().top,
+//     behavior: "smooth"
+// });
