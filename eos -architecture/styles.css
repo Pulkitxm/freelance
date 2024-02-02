@@ -20,9 +20,36 @@ a {
   --perspectiveVal: 10px;
   --perspectiveValNag: -10px;
 }
+.blur-load {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  img {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 1/1;
+    display: block;
+    object-position: center;
+    object-fit: cover;
+  }
+}
+
+.blur-load > img{
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.loaded > img{
+  opacity: 1;
+}
+
+.loaded {
+  content:none ;
+  animation: none;
+}
 
 .app {
-  height: 100vh;
+  height: 100svh;
   scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;
@@ -31,7 +58,7 @@ a {
 
 #loading {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   background-color: #000;
   z-index: 2;
   position: absolute;
@@ -95,7 +122,7 @@ a {
 }
 
 .app {
-  height: 100vh;
+  height: 100svh;
   scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;
@@ -104,7 +131,7 @@ a {
 
 #loading {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   background-color: #000;
   z-index: 2;
   position: absolute;
@@ -310,35 +337,82 @@ nav {
       font-size: 3rem;
       font-family: "Cedarville Cursive", cursive;
     }
+    p {
+      font-size: 1.2em;
+    }
+    h2 {
+      font-size: 2rem;
+    }
   }
   @media (max-width: 700px) {
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
       font-family: "Cedarville Cursive", cursive;
     }
-    padding: 1em;
+    p {
+      font-size: 1.2em;
+    }
+    h2 {
+      font-size: 2rem;
+    }
   }
   background-color: #ffffff;
 
-  h2 {
-    font-size: 2rem;
-  }
-
   .desc {
-    margin-top: 4em;
+    margin-top: 1em;
     display: flex;
-    justify-content: space-between;
-
     .txt {
       width: 50%;
+      font-size: 1.3em;
     }
-
-    .sketch {
-      background-size: cover;
-      width: 50%;
-      margin: 0;
-      img {
-        width: 80%;
+    @media (min-width: 700px) {
+      justify-content: space-between;
+      h1 {
+        font-size: 2.5rem;
+        font-family: "Cedarville Cursive", cursive;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      .sketch {
+        width: 25em;
+        height: 20em;
+        margin: 0;
+        .blur-load {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          img {
+            width: 80%;
+            border-radius: 10px;
+          }
+        }
+        transform: translateY(-100px);
+      }
+    }
+    @media (max-width: 700px) {
+      justify-content: center;
+      flex-direction: column;
+      .txt,
+      .sketch {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .sketch {
+        padding: 0;
+        width: 25em;
+        height: 20em;
+        margin: 0;
+        .blur-load {
+          width: 80%;
+          height: 80%;
+          border-radius: 10px;
+          img {
+            width: 80%;
+            border-radius: 10px;
+          }
+        }
       }
     }
   }
@@ -389,6 +463,10 @@ nav {
       }
     }
   }
+  p {
+    font-size: 1.3em;
+    text-align: center;
+  }
 }
 
 .projects {
@@ -407,12 +485,22 @@ nav {
     padding: 1em;
   }
   background-color: #ffffff;
-
+  h5 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
   .align {
     margin-top: 3em;
     display: flex;
     @media (max-width: 700px) {
       flex-direction: column;
+    }
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .left {
@@ -425,26 +513,25 @@ nav {
           text-align: center;
           margin-bottom: 1em;
         }
+        .blur-load{
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
       }
       @media (min-width: 700px) {
         width: 50%;
-      }
-
-      img {
-        margin-top: 2em;
-        @media (min-width: 700px) {
-          width: 60%;
-          height: 50%;
-          img {
-            width: 60%;
+        .blur-load{
+          width: 30em;
+          height: 40em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
           }
         }
-        @media (max-width: 700px) {
-          width: 90%;
-          margin: auto;
-        }
-        border-radius: 1em;
-        overflow: hidden;
       }
     }
 
@@ -458,19 +545,24 @@ nav {
           text-align: center;
           margin-bottom: 1em;
         }
-        img {
-          margin-top: 2em;
-          width: 90%;
-          border-radius: 1em;
-          margin: auto;
+        .blur-load{
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
         }
       }
       @media (min-width: 700px) {
         width: 50%;
-        img {
-          margin-top: 2em;
-          width: 100%;
-          border-radius: 1em;
+        .blur-load{
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
         }
       }
     }
@@ -478,6 +570,9 @@ nav {
 }
 
 .commuity {
+  p {
+    font-size: 1.3em;
+  }
   @media (min-width: 700px) {
     padding: 5em;
     h1 {
@@ -501,8 +596,13 @@ nav {
         width: 50%;
       }
       .left {
-        img {
-          width: 80%;
+        .blur-load {
+          width:25em;
+          height: 25em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
         }
       }
     }
@@ -514,8 +614,13 @@ nav {
         width: 100%;
       }
       .left {
-        img {
-          width: 100%;
+        .blur-load {
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
         }
       }
     }
@@ -567,8 +672,13 @@ nav {
       .left,
       .right {
         width: 50%;
-        img {
-          width: 80%;
+        .blur-load {
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -585,8 +695,13 @@ nav {
       .left,
       .right {
         width: 100%;
-        img {
-          width: 100%;
+        .blur-load {
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -670,14 +785,8 @@ nav {
     }
     .review {
       margin: 1em;
-      width: 100px;
-      /* height: 10px; */
       border: solid 2px #bfbdbd;
       border-radius: 10px;
-      .footer {
-        padding: 1em;
-        background-color: #ececec;
-      }
     }
   }
 }
@@ -818,5 +927,17 @@ nav {
   50% {
     transform: scale(1.1);
     opacity: 1;
+  }
+}
+@keyframes pulse {
+  0%{
+    background-color: rgba(255, 255, 255,.3);
+  }
+  50% {
+    background-color: rgba(255, 255, 255,0);
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255,.3);
   }
 }

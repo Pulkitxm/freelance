@@ -9,7 +9,7 @@ const navigators = document.querySelectorAll('.navigators');
 const ham = document.querySelector('.ham');
 const images = document.querySelectorAll('img');
 const videos = document.querySelectorAll('video');
-const slidebarWidth = appElement && ( appElement.offsetWidth - appElement.clientWidth );
+const slidebarWidth = appElement && (appElement.offsetWidth - appElement.clientWidth);
 const testimonials = document.querySelector('.testimonials');
 
 const handleScroll = () => {
@@ -53,7 +53,7 @@ const handleSmallNavAndResize = () => {
         collapsible.classList.remove("open", "open-nav");
         setTimeout(() => {
             collapsible.style.display = 'none';
-        },350);
+        }, 350);
     };
     const toggleNav = () => {
         ham.classList.toggle('open');
@@ -105,7 +105,7 @@ const makeTeamElements = () => {
         const clone = teamItem.cloneNode(true);
         clone.style.height = '100px';
         clone.style.width = '100px';
-        clone.querySelector('.team-face').src = `./assets/team/${member.img}`;
+        clone.querySelector('.team-face').src = `./assets/original/team/${member.img}`;
         clone.querySelector('.name').innerText = member.name;
         teamContainer.appendChild(clone);
     })
@@ -114,7 +114,7 @@ const makeTeamElements = () => {
 const makeReviewsElements = () => {
     const reviewItem = document.querySelector('.review');
     const reviewContainer = reviewItem.parentElement;
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 3; i++) {
         const clone = reviewItem.cloneNode(true);
         clone.querySelector('.card-text').innerText = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus tempora cum beatae pariatur`;
         clone.querySelector('.card-footer').innerText = `- XYZ`;
@@ -122,15 +122,34 @@ const makeReviewsElements = () => {
     }
     reviewItem.remove();
 }
+const loadBlurryImages = () => {
+    const blurDivs = document.querySelectorAll(".blur-load");
+    blurDivs.forEach(div => {
+        const img = div.querySelector("img");
+        function loaded() {
+            setTimeout(()=>{
+                div.classList.add("loaded")
+            },500)
+        }
 
-window.addEventListener("load", () => {
-    document.querySelector('#loading').style.opacity = '0';
-    document.querySelector('#loading').style.zIndex = '0';
-    document.querySelector('#loading').style.display = 'none';
-})
-try{
+        if (img.complete) {
+            console.log("loading complete",img);
+            loaded();
+        }
+        else {
+            img.addEventListener("load", loaded);
+        }
+    })
+}
 
+try {
+    window.addEventListener("load", () => {
+        // document.querySelector('#loading').style.opacity = '0';
+        // document.querySelector('#loading').style.zIndex = '0';
+        // document.querySelector('#loading').style.display = 'none';
+    })
     handleScroll();
+    loadBlurryImages();
     arrow.addEventListener('click', () => appElement.scrollTo({ top: window.innerHeight, behavior: "smooth" }));
     arrowUp.addEventListener('click', () => appElement.scrollTo({ top: 0, behavior: "smooth" }));
     appElement.addEventListener("scroll", handleScroll);
@@ -148,9 +167,9 @@ try{
     }
     makeTeamElements();
     makeReviewsElements();
-}catch(err){}
+} catch (err) { }
 
-// appElement && appElement.scrollTo({ 
-//     top: document.getElementById('contact').getBoundingClientRect().top+300, 
-//     behavior: "smooth" 
+// appElement && appElement.scrollTo({
+//     top: document.getElementById('products').getBoundingClientRect().top,
+//     behavior: "smooth"
 // });

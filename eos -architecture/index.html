@@ -14,15 +14,15 @@
 </head>
 
 <body>
-  <div id="loading">
+  <!-- <div id="loading">
     <div>
-      <img src="./assets/logo.webp" alt="">
+      <img src="./assets/original/logo.webp" alt="">
       <h2>Eos-Architecture</h2>
     </div>
-  </div>
+  </div> -->
   <nav>
     <a href="/" class="logo">
-      <img src="./assets/logo.webp" alt="logo">
+      <img src="./assets/original/logo.webp" alt="logo">
       <div class="title" id="title">
         <p>eos</p>
         <p>architecture</p>
@@ -93,7 +93,9 @@
           </p>
         </div>
         <div class="sketch">
-          <img src="./assets/sketch.webp" draggable="false" alt="...">
+          <div class="blur-load" style="background-image:url('./assets/small/sketch.webp')">
+            <img loading="lazy" src="./assets/original/sketch.webp" draggable="false" alt="...">
+          </div>
         </div>
       </div>
 
@@ -115,17 +117,21 @@
 
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./assets/worksops-1.webp" draggable="false" class="d-block" alt="...">
+          <div class="blur-load carousel-item active"
+            style="background: url('./assets/small/worksops-1.webp');background-size: cover;">
+            <img loading="lazy" src="./assets/original/worksops-1.webp" draggable="false" class="d-block" alt="...">
           </div>
-          <div class="carousel-item">
-            <img src="./assets/worksops-2.webp" draggable="false" class="d-block" alt="...">
+          <div class="blur-load carousel-item"
+            style="background: url('./assets/small/worksops-2.webp');background-size: cover;">
+            <img loading="lazy" src="./assets/original/worksops-2.webp" draggable="false" class="d-block" alt="...">
           </div>
-          <div class="carousel-item">
-            <img src="./assets/worksops-3.webp" draggable="false" class="d-block" alt="...">
+          <div class="blur-load carousel-item"
+            style="background: url('./assets/small/worksops-3.webp');background-size: cover;">
+            <img loading="lazy" src="./assets/original/worksops-3.webp" draggable="false" class="d-block" alt="...">
           </div>
-          <div class="carousel-item">
-            <img src="./assets/worksops-4.webp" draggable="false" class="d-block" alt="...">
+          <div class="blur-load carousel-item"
+            style="background: url('./assets/small/worksops-4.webp');background-size: cover;">
+            <img loading="lazy" src="./assets/original/worksops-4.webp" draggable="false" class="d-block" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -150,13 +156,20 @@
       <h1>Projects</h1>
       <div class="align">
         <div class="left">
-          <img src="./assets/hut.webp" alt="">
+          <div class="blur-load" style="background: url('./assets/small/hut.webp');background-size: cover;">
+            <img src="./assets/original/hut.webp" alt="" loading="lazy">
+          </div>
+          <!-- <br><br> -->
           <h5>Studio Eos</h5>
         </div>
         <div class="right">
-          <img src="./assets/forest.webp" alt="">
+          <div class="blur-load" style="background: url('./assets/small/forest.webp');background-size: cover;">
+            <img src="./assets/original/forest.webp" alt="" loading="lazy">
+          </div>
           <h5>Ashreya at Yaksha Forest Graden</h5>
-          <img src="./assets/cafe.webp" alt="">
+          <div class="blur-load" style="background: url('./assets/small/cafe.webp');background-size: cover;">
+            <img src="./assets/original/cafe.webp" alt="" loading="lazy">
+          </div>
           <h5>Neembagh Cafe</h5>
         </div>
       </div>
@@ -166,14 +179,16 @@
       <h1>Community</h1>
       <div class="align">
         <div class="left">
-          <img src="./assets/community.webp" alt="">
+          <div class="blur-load" style="background: url('./assets/small/community.webp');background-size: cover;">
+            <img src="./assets/original/community.webp" loading="lazy" alt="">
+          </div>
           <p>We belive in connecting like minded people</p>
         </div>
         <div class="right">
           <h2>Meet the team</h2>
           <div class="team-items">
             <div class="team-item">
-              <img src="./assets/team/1.webp" class="team-face" alt="">
+              <img src="./assets/original/team/1.webp" loading="lazy" class="team-face" alt="">
               <div class="name">sadsadasd</div>
             </div>
           </div>
@@ -185,7 +200,9 @@
       <h1>Products</h1>
       <div class="align">
         <div class="left">
-          <img src="./assets/project.webp" alt="">
+          <div class="blur-load" style="background: url('./assets/small/project.webp');background-size: cover;"> 
+            <img src="./assets/original/project.webp" loading="lazy" alt="">
+          </div>
         </div>
         <div class="right">
           <h3>Natural pigments</h3>
@@ -203,14 +220,14 @@
         <div class="left">
           <div>
             <a href="https://www.instagram.com/eosdesign.studio/" target="_blank">
-              <img src="./assets/insta.webp" alt="">
+              <img src="./assets/original/insta.webp" alt="">
             </a>
             <a href="https://www.instagram.com/eosdesign.studio/" target="_blank">
               <p>@eosdeign.studio</p>
             </a>
           </div>
           <div>
-            <img src="./assets/wa.webp" alt="">
+            <img src="./assets/original/wa.webp" alt="">
             <p>+91 9509028478</p>
           </div>
         </div>
@@ -226,15 +243,11 @@
         </div>
       </div>
       <div class="testimonials">
-        <div class="card review">
+        <div class="card review" style="width: 18rem;">
           <div class="card-body">
-            <p class="card-text">
-              a
-            </p>
+            <div class="card-text"></div>
           </div>
-          <div class="card-footer">
-            a
-          </div>
+          <div class="card-footer"></div>
         </div>
       </div>
     </section>
