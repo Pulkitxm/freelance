@@ -133,7 +133,6 @@ const loadBlurryImages = () => {
         }
 
         if (img.complete) {
-            console.log("loading complete",img);
             loaded();
         }
         else {
@@ -144,9 +143,9 @@ const loadBlurryImages = () => {
 
 try {
     window.addEventListener("load", () => {
-        // document.querySelector('#loading').style.opacity = '0';
-        // document.querySelector('#loading').style.zIndex = '0';
-        // document.querySelector('#loading').style.display = 'none';
+        document.querySelector('#loading').style.opacity = '0';
+        document.querySelector('#loading').style.zIndex = '0';
+        document.querySelector('#loading').style.display = 'none';
     })
     handleScroll();
     loadBlurryImages();
@@ -169,7 +168,7 @@ try {
     makeReviewsElements();
 } catch (err) { }
 
-// appElement && appElement.scrollTo({
-//     top: document.getElementById('products').getBoundingClientRect().top,
-//     behavior: "smooth"
-// });
+appElement && appElement.scrollTo({
+    top: document.getElementById('contact').getBoundingClientRect().top,
+    behavior: "smooth"
+});

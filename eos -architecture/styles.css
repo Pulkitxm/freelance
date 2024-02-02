@@ -778,6 +778,11 @@ nav {
   .testimonials {
     padding: 5em;
     display: flex !important;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+    justify-content: center;
+    align-items: center;
     overflow-x: auto;
     h1 {
       font-size: 3rem;
