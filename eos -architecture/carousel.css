@@ -1,0 +1,70 @@
+.carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  @media (max-width: 768px) {
+    height: 20em;
+  }
+  @media (min-width: 768px) {
+    height: 30em;
+  }
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.arrow-carousel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+}
+
+.gallery {
+  width: 100%;
+  height: 20em;
+}
+
+.gallery > .flickity-page-dots {
+  display: none;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 13em;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .card-text{
+    width: 80%;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .card-footer{
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
