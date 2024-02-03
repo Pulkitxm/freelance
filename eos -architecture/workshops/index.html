@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <title>Eos-Architecture | Projects</title>
-  <link rel="shortcut icon" href="./assets/logo.webp" type="image/x-icon">
+  <title>Eos-Architecture</title>
+  <link rel="shortcut icon" href="../assets/logo.webp" type="image/x-icon">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +15,13 @@
 <body>
   <div id="loading">
     <div>
-      <img src="./assets/original/logo.webp" alt="">
+      <img src="../assets/original/logo.webp" alt="">
       <h2>Eos-Architecture</h2>
     </div>
   </div>
   <nav>
     <a href="/" class="logo">
-      <img src="./assets/original/logo.webp" alt="logo">
+      <img src="../assets/original/logo.webp" alt="logo">
       <div class="title" id="title">
         <p>eos</p>
         <p>architecture</p>
@@ -57,27 +57,45 @@
   </nav>
   <div class="app">
 
-    <section class="projects" id="projects">
-      <h1>Projects</h1>
-      <div class="align">
-        <div class="left">
-          <div class="blur-load" style="background: url('./assets/small/hut.webp');background-size: cover;">
-            <img src="./assets/original/hut.webp" alt="" loading="lazy">
+    <section class="workshops" id="workshops">
+
+      <h1>Workshops</h1>
+
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="blur-load carousel-item active"
+            style="background: url('../assets/small/worksops-1.webp');background-size: cover;">
+              <img loading="lazy" src="../assets/original/worksops-1.webp" draggable="false" class="d-block" alt="...">
           </div>
-          <!-- <br><br> -->
-          <h5>Studio Eos</h5>
+          <div class="blur-load carousel-item"
+            style="background: url('../assets/small/worksops-2.webp');background-size: cover;">
+              <img loading="lazy" src="../assets/original/worksops-2.webp" draggable="false" class="d-block" alt="...">
+          </div>
+          <div class="blur-load carousel-item"
+            style="background: url('../assets/small/worksops-3.webp');background-size: cover;">
+              <img loading="lazy" src="../assets/original/worksops-3.webp" draggable="false" class="d-block" alt="...">
+          </div>
+          <div class="blur-load carousel-item"
+            style="background: url('../assets/small/worksops-4.webp');background-size: cover;">
+              <img loading="lazy" src="../assets/original/worksops-4.webp" draggable="false" class="d-block" alt="...">
+          </div>
         </div>
-        <div class="right">
-          <div class="blur-load" style="background: url('./assets/small/forest.webp');background-size: cover;">
-            <img src="./assets/original/forest.webp" alt="" loading="lazy">
-          </div>
-          <h5>Ashreya at Yaksha Forest Graden</h5>
-          <div class="blur-load" style="background: url('./assets/small/cafe.webp');background-size: cover;">
-            <img src="./assets/original/cafe.webp" alt="" loading="lazy">
-          </div>
-          <h5>Neembagh Cafe</h5>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+
+      <p>We have worksops for both begginers and advanced natural builders, in which we cover both theory and practical
+        aspectss of natural buildings. Each of our workshops are unique in terms of the content and design, and we
+        constantly keep experimenting to teach you something new in each worksops</p>
+
     </section>
 
   </div>
@@ -90,25 +108,19 @@
           <path
             d="M384.535,1105.54 C384.145,1105.93 383.512,1105.93 383.121,1105.54 L379,1101.41 L379,1112 C379,1112.55 378.553,1113 378,1113 C377.447,1113 377,1112.55 377,1112 L377,1101.41 L372.879,1105.54 C372.488,1105.93 371.854,1105.93 371.465,1105.54 C371.074,1105.14 371.074,1104.51 371.465,1104.12 L377.121,1098.46 C377.361,1098.22 377.689,1098.15 378,1098.21 C378.311,1098.15 378.639,1098.22 378.879,1098.46 L384.535,1104.12 C384.926,1104.51 384.926,1105.14 384.535,1105.54 L384.535,1105.54 Z M378,1089 C369.163,1089 362,1096.16 362,1105 C362,1113.84 369.163,1121 378,1121 C386.837,1121 394,1113.84 394,1105 C394,1096.16 386.837,1089 378,1089 L378,1089 Z"
             id="arrow-up-circle" sketch:type="MSShapeGroup">
+
           </path>
         </g>
       </g>
     </svg>
   </div>
-  <script>
-    const navElement = document.querySelector('nav');
-    const titleElement = document.getElementById('title');
-    navElement.style.background = 'rgb(215, 158, 126)';
-    navElement.style.borderBottom = null;
-    navElement.style.color = 'black';
-    titleElement.style.color = 'black';
-    titleElement.style.opacity = '1';
-    window.onload = () => {
-      document.querySelector('#loading').style.opacity = '0';
-      document.querySelector('#loading').style.zIndex = '0';
-      document.querySelector('#loading').style.display = 'none';
-    }
-  </script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

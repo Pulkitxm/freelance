@@ -279,198 +279,6 @@ nav {
   }
 }
 
-.home {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
-
-  .desc {
-    position: absolute;
-    left: 1em;
-  }
-
-  .desc p {
-    line-height: 1.2em;
-    font-size: 1.3rem;
-    color: white;
-    text-shadow: 0 0 5px black;
-  }
-
-  .background {
-    position: absolute;
-    height: 100%;
-    width: 100vw;
-    object-fit: cover;
-    z-index: -5;
-    transform: translateZ(var(--perspectiveValNag)) scale(2);
-    filter: brightness(70%);
-  }
-
-  .overlay {
-    z-index: -1;
-    height: 100%;
-    width: 100vw;
-  }
-
-  .arrow {
-    position: absolute;
-    right: 50%;
-    transform: translate(50%, 50%);
-    bottom: 3em;
-    align-self: flex-end;
-    color: #fff;
-    cursor: pointer;
-
-    svg {
-      opacity: 0;
-    }
-  }
-}
-
-.about {
-  @media (min-width: 700px) {
-    padding: 5em;
-    h1 {
-      font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
-    }
-    p {
-      font-size: 1.2em;
-    }
-    h2 {
-      font-size: 2rem;
-    }
-  }
-  @media (max-width: 700px) {
-    h1 {
-      font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
-    }
-    p {
-      font-size: 1.2em;
-    }
-    h2 {
-      font-size: 2rem;
-    }
-  }
-  background-color: #ffffff;
-
-  .desc {
-    margin-top: 1em;
-    display: flex;
-    .txt {
-      width: 50%;
-      font-size: 1.3em;
-    }
-    @media (min-width: 700px) {
-      justify-content: space-between;
-      h1 {
-        font-size: 2.5rem;
-        font-family: "Cedarville Cursive", cursive;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-      .sketch {
-        width: 25em;
-        height: 20em;
-        margin: 0;
-        .blur-load {
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-          img {
-            width: 80%;
-            border-radius: 10px;
-          }
-        }
-        transform: translateY(-100px);
-      }
-    }
-    @media (max-width: 700px) {
-      justify-content: center;
-      flex-direction: column;
-      .txt,
-      .sketch {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-      .sketch {
-        padding: 0;
-        width: 25em;
-        height: 20em;
-        margin: 0;
-        .blur-load {
-          width: 80%;
-          height: 80%;
-          border-radius: 10px;
-          img {
-            width: 80%;
-            border-radius: 10px;
-          }
-        }
-      }
-    }
-  }
-}
-
-.workshops {
-  @media (min-width: 700px) {
-    padding: 5em;
-    h1 {
-      font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
-    }
-  }
-  @media (max-width: 700px) {
-    h1 {
-      font-size: 2rem;
-      font-family: "Cedarville Cursive", cursive;
-    }
-    padding: 1em;
-  }
-  background-color: #ffffff;
-
-  #carouselExampleAutoplaying {
-    @media (min-width: 1270px) {
-      width: 60%;
-      height: 35em;
-    }
-    @media (min-width: 700px) and (max-width: 1270px) {
-      width: 100%;
-      height: 27em;
-    }
-    @media (max-width: 700px) {
-      width: 100%;
-      height: 20em;
-    }
-    margin: 1em auto;
-
-    .carousel-inner {
-      width: 100%;
-      height: 100%;
-      margin: auto;
-      border-radius: 1em;
-      box-shadow: 2px 2px 20px #000000a4;
-      .carousel-item,
-      .carousel-item img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  p {
-    font-size: 1.3em;
-    text-align: center;
-  }
-}
-
 .projects {
   @media (min-width: 700px) {
     padding: 5em;
@@ -571,230 +379,226 @@ nav {
   }
 }
 
-.commuity {
-  p {
-    font-size: 1.3em;
-  }
+.studios {
   @media (min-width: 700px) {
     padding: 5em;
-    h1 {
-      font-size: 3rem;
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
       font-family: "Cedarville Cursive", cursive;
+    }
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
     }
   }
   @media (max-width: 700px) {
-    h1 {
+    h2 {
       font-size: 2rem;
+      font-weight: 600;
       font-family: "Cedarville Cursive", cursive;
+    }
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
     }
     padding: 1em;
   }
   background-color: #ffffff;
-  .align {
-    @media (min-width: 700px) {
-      display: flex;
-      .left,
-      .right {
-        width: 50%;
-      }
-      .left {
-        .blur-load {
-          width:25em;
-          height: 25em;
-          img{
-            width: 100% !important;
-            height: 100% !important;
-          }
-        }
-      }
-    }
-    @media (max-width: 700px) {
-      display: flex;
-      flex-direction: column;
-      .left,
-      .right {
-        width: 100%;
-      }
-      .left {
-        .blur-load {
-          width: 20em;
-          height: 20em;
-          img{
-            width: 100% !important;
-            height: 100% !important;
-          }
-        }
-      }
-    }
-
-    .left {
-      img {
-        margin-top: 2em;
-        border-radius: 1em;
-      }
-    }
-
-    .right {
-      .team-items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .team-item {
-          @media (min-width: 700px) {
-            margin: 1em;
-          }
-          @media (max-width: 700px) {
-            margin: 1em 0.5em;
-          }
-
-          .team-face {
-            width: 110px;
-            height: 100px;
-            border-radius: 50%;
-          }
-          .name {
-            text-align: center;
-          }
-        }
-      }
-    }
+  h5 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
   }
-}
-
-.products {
-  @media (min-width: 700px) {
-    padding: 5em;
-    h1 {
-      font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
-    }
-    .align {
-      display: flex;
-      .left,
-      .right {
-        width: 50%;
-        .blur-load {
-          width: 20em;
-          height: 20em;
-          img{
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 700px) {
-    h1 {
-      font-size: 2rem;
-      font-family: "Cedarville Cursive", cursive;
-    }
-    padding: 1em;
-    .align {
-      display: flex;
-      flex-direction: column;
-      .left,
-      .right {
-        width: 100%;
-        .blur-load {
-          width: 20em;
-          height: 20em;
-          img{
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-    }
-  }
-  background-color: #ffffff;
-
-  .align {
-    .left {
-      img {
-        margin: 1em 0;
-        border-radius: 1em;
-      }
-    }
-  }
-}
-
-.contact {
-  @media (min-width: 700px) {
-    padding: 5em;
-    h1 {
-      font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
-    }
-    .align {
-      display: flex;
-      .left,
-      .right {
-        width: 50%;
-      }
-    }
-  }
-  @media (max-width: 700px) {
-    h1 {
-      font-size: 2rem;
-      font-family: "Cedarville Cursive", cursive;
-    }
-    padding: 1em;
-    .align {
-      display: flex;
-      flex-direction: column;
-      .left,
-      .right {
-        width: 100%;
-        margin: 0.5em 0;
-      }
-    }
-  }
-  background-color: #ffffff;
-
   .align {
     margin-top: 3em;
-    .left {
-      div {
-        display: flex;
-        align-items: center;
-
-        img {
-          width: 100px;
-          margin-right: 4em;
-        }
-
-        p {
-          font-size: 1.4em;
-          color: #000;
-        }
-      }
-    }
-    .right {
-      b {
-        font-size: 1.5em;
-      }
-    }
-  }
-  .testimonials {
-    padding: 5em;
-    display: flex !important;
+    display: flex;
     @media (max-width: 700px) {
       flex-direction: column;
     }
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    h1 {
-      font-size: 3rem;
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      @media (max-width: 700px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+        .blur-load{
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+      @media (min-width: 700px) {
+        width: 50%;
+        p{
+          font-size: 1.2em;
+        }
+        
+      }
+    }
+
+    .right {
+      @media (max-width: 700px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+        video{
+          border-radius: 10px;
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+      @media (min-width: 700px) {
+        padding: 1em;
+        width: 50%;
+        video{
+          border-radius: 10px;
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+.neembagh,
+.ashreya {
+  @media (min-width: 700px) {
+    padding: 5em;
+    h1{
+      font-size: 2rem;
+      font-weight: 600;
       font-family: "Cedarville Cursive", cursive;
     }
-    .review {
-      margin: 1em;
-      border: solid 2px #bfbdbd;
-      border-radius: 10px;
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
     }
+  }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    padding: 1em;
+  }
+  background-color: #ffffff;
+  h5 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
+  .align {
+    margin-top: 3em;
+    display: flex;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      @media (max-width: 700px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+        .blur-load{
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+      @media (min-width: 700px) {
+        width: 50%;
+        p{
+          font-size: 1.2em;
+        }
+        
+      }
+    }
+    
+    .right {
+      @media (max-width: 700px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+        video{
+          border-radius: 10px;
+          width: 100% !important;
+          height: 100% !important;
+        }
+         .blur-load{
+          width: 20em;
+          height: 20em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+      @media (min-width: 700px) {
+        padding: 1em;
+        width: 50%;
+        video{
+          border-radius: 10px;
+          width: 100% !important;
+          height: 100% !important;
+        }
+         .blur-load{
+          width: 30em;
+          height: 20em;
+          img{
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+    }
+  }
+  .align ~ p{
+    font-size: 1.5em;
+    text-align: center;
   }
 }
 
@@ -862,45 +666,6 @@ nav {
     transform: translateY(0);
   }
 }
-
-@keyframes showUpRev {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes hideDownRev {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-}
-
-@keyframes pulsing {
-  0% {
-    background-color: rgba(255, 255, 255, 0);
-  }
-
-  50% {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  100% {
-    background-color: rgba(255, 255, 255, 0);
-  }
-}
-
 @keyframes show {
   0% {
     opacity: 0;
@@ -934,17 +699,5 @@ nav {
   50% {
     transform: scale(1.1);
     opacity: 1;
-  }
-}
-@keyframes pulse {
-  0%{
-    background-color: rgba(255, 255, 255,.3);
-  }
-  50% {
-    background-color: rgba(255, 255, 255,0);
-  }
-
-  100% {
-    background-color: rgba(255, 255, 255,.3);
   }
 }
