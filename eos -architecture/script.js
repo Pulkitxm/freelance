@@ -10,6 +10,7 @@ const images = document.querySelectorAll('img');
 const videos = document.querySelectorAll('video');
 const slidebarWidth = appElement && (appElement.offsetWidth - appElement.clientWidth);
 const testimonials = document.querySelector('.testimonials');
+const carousel = document.querySelector('.carousel');
 const carouselContainer = document.getElementById('carousel-container');
 let currentIndex = 0;
 
@@ -145,21 +146,23 @@ const loadBlurryImages = () => {
 function moveCarousel(direction) {
     currentIndex = (currentIndex + direction + carouselContainer.children.length) % carouselContainer.children.length;
     const translateValue = -currentIndex * 100 + '%';
-    // if(carouselContainer.children[currentIndex].classList.contains('loaded')){
-        carouselContainer.style.transform = 'translateX(' + translateValue + ')';
-    // }else{
-    //     carouselContainer.children[currentIndex].children[0].addEventListener("load", () => {
-    //        setTimeout(() => { carouselContainer.style.transform = 'translateX(' + translateValue + ')';},500);
-    //     });
-    // }
+    if(carousel.classList.contains('animate')){
+        if(carouselContainer.children[currentIndex].classList.contains('loaded') ){
+            carouselContainer.style.transform = 'translateX(' + translateValue + ')';
+        }else{
+            carouselContainer.children[currentIndex].children[0].addEventListener("load", () => {
+               setTimeout(() => { carouselContainer.style.transform = 'translateX(' + translateValue + ')';},500);
+            });
+        }
+    }
 }
 
 try {
     window.addEventListener("load", () => {
         setTimeout(() => {
-            document.querySelector('#loading').style.opacity = '0';
-            document.querySelector('#loading').style.zIndex = '0';
-            document.querySelector('#loading').style.display = 'none';
+            // document.querySelector('#loading').style.opacity = '0';
+            // document.querySelector('#loading').style.zIndex = '0';
+            // document.querySelector('#loading').style.display = 'none';
         }, 2000);
     })
     handleScroll();
@@ -177,11 +180,11 @@ try {
         navElement.style.width = `calc(100vw - ${slidebarWidth}px)`;
     }
     makeReviewsElements();
-    const interval = 2000;
+    const interval = 3000;
     setInterval(() => moveCarousel(1), interval);
 } catch (err) { }
 
-// appElement && appElement.scrollTo({
-//     top: document.querySelector('.meet-team').getBoundingClientRect().top-100,
-//     behavior: "smooth"
-// });
+appElement && appElement.scrollTo({
+    top: document.querySelector('.workshops').getBoundingClientRect().top-100,
+    behavior: "smooth"
+});
