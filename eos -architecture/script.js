@@ -18,8 +18,8 @@ const handleScroll = () => {
     const scrollPosition = appElement && appElement.scrollTop;
 
     // scroll to top arrow handle
-    arrowUp.classList.toggle("show", scrollPosition >= homeHeight-50);
-    arrowUp.classList.toggle("hide", scrollPosition < homeHeight-50);
+    arrowUp.classList.toggle("show", scrollPosition >= homeHeight - 50);
+    arrowUp.classList.toggle("hide", scrollPosition < homeHeight - 50);
 
     // home scroll down arrow styling
     arrow.style.animation = (scrollPosition === 0) ? 'showUpRev 1s forwards' : 'hideDownRev 2s forwards';
@@ -119,39 +119,47 @@ const makeReviewsElements = () => {
     ];
     for (let i = 0; i < reviews.length; i++) {
         const clone = reviewItem.cloneNode(true);
-        clone.querySelector('.card-text').innerText = "'' "+reviews[i].review+" ''";
-        clone.querySelector('.card-footer').innerText = '- '+reviews[i].user;
+        clone.querySelector('.card-text').innerText = "'' " + reviews[i].review + " ''";
+        clone.querySelector('.card-footer').innerText = '- ' + reviews[i].user;
         reviewContainer.appendChild(clone);
     }
     reviewItem.remove();
 }
 const loadBlurryImages = () => {
     const blurDivs = document.querySelectorAll(".blur-load");
-    blurDivs.forEach(div => {
-        const img = div.querySelector("img");
-        function loaded() {
-            setTimeout(() => {
-                div.classList.add("loaded")
-            }, 500)
-        }
-
-        if (img.complete) {
-            loaded();
-        }
-        else {
-            img.addEventListener("load", loaded);
-        }
-    })
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const div = entry.target;
+                const img = div.querySelector("img");
+                function loaded() {
+                    setTimeout(() => {
+                        div.classList.add("loaded")
+                    }, 500)
+                }
+                if (img.complete) {
+                    loaded();
+                }
+                else {
+                    img.addEventListener("load", loaded);
+                }
+            }
+        });
+    }
+    );
+    blurDivs.forEach((element) => {
+        observer.observe(element);
+    });
 }
 function moveCarousel(direction) {
     currentIndex = (currentIndex + direction + carouselContainer.children.length) % carouselContainer.children.length;
     const translateValue = -currentIndex * 100 + '%';
-    if(carousel.classList.contains('animate')){
-        if(carouselContainer.children[currentIndex].classList.contains('loaded') ){
+    if (carousel.classList.contains('animate')) {
+        if (carouselContainer.children[currentIndex].classList.contains('loaded')) {
             carouselContainer.style.transform = 'translateX(' + translateValue + ')';
-        }else{
+        } else {
             carouselContainer.children[currentIndex].children[0].addEventListener("load", () => {
-               setTimeout(() => { carouselContainer.style.transform = 'translateX(' + translateValue + ')';},500);
+                setTimeout(() => { carouselContainer.style.transform = 'translateX(' + translateValue + ')'; }, 500);
             });
         }
     }
@@ -167,7 +175,7 @@ try {
     })
     handleScroll();
     loadBlurryImages();
-    arrow.addEventListener('click', () => appElement.scrollTo({ top: window.innerHeight-50, behavior: "smooth" }));
+    arrow.addEventListener('click', () => appElement.scrollTo({ top: window.innerHeight - 50, behavior: "smooth" }));
     arrowUp.addEventListener('click', () => appElement.scrollTo({ top: 0, behavior: "smooth" }));
     appElement.addEventListener("scroll", handleScroll);
     navigators.forEach(navigator => {
