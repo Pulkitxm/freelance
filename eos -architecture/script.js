@@ -154,12 +154,12 @@ function moveCarousel(direction) {
     // }
 }
 
-// try {
+try {
     window.addEventListener("load", () => {
         setTimeout(() => {
-            // document.querySelector('#loading').style.opacity = '0';
-            // document.querySelector('#loading').style.zIndex = '0';
-            // document.querySelector('#loading').style.display = 'none';
+            document.querySelector('#loading').style.opacity = '0';
+            document.querySelector('#loading').style.zIndex = '0';
+            document.querySelector('#loading').style.display = 'none';
         }, 2000);
     })
     handleScroll();
@@ -179,7 +179,7 @@ function moveCarousel(direction) {
     makeReviewsElements();
     const interval = 2000;
     setInterval(() => moveCarousel(1), interval);
-// } catch (err) { }
+} catch (err) { }
 
 // appElement && appElement.scrollTo({
 //     top: document.querySelector('.meet-team').getBoundingClientRect().top-100,
