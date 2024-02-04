@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;1,6..96,600&family=Cedarville+Cursive&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap");
 body {
   margin: 0;
   overflow: hidden;
+  font-family: "Open Sans", sans-serif;
 }
 
 button {
@@ -218,9 +218,8 @@ nav {
       align-items: center;
       flex-grow: 1;
       list-style: none;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
       font-size: 1.5em;
-      font-weight: 900;
       transition: opacity 1s;
       border-radius: 4px;
       box-shadow: 2px 2px 20px #00000065;
@@ -234,9 +233,8 @@ nav {
       align-items: center;
       flex-grow: 1;
       list-style: none;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
       font-size: 1.5em;
-      font-weight: 900;
       opacity: 0.7;
     }
 
@@ -341,11 +339,15 @@ nav {
 }
 
 .about {
+  .animate-on-scroll {
+    transform: scale(0.7);
+    transition: transform 1s ease-in-out;
+  }
   @media (min-width: 700px) {
     padding: 5em;
     h1 {
       font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     p {
       font-size: 1.2em;
@@ -358,7 +360,7 @@ nav {
     padding: 1em;
     h1 {
       font-size: 2.5rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     p {
       font-size: 1.2em;
@@ -379,7 +381,7 @@ nav {
       justify-content: space-between;
       h1 {
         font-size: 2.5rem;
-        font-family: "Cedarville Cursive", cursive;
+        font-family: "Pacifico", cursive;
       }
       h2 {
         font-size: 1.2rem;
@@ -459,17 +461,17 @@ nav {
     padding: 5em;
     h1 {
       font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
   }
   @media (max-width: 700px) {
     h1 {
       font-size: 2rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     padding: 1em;
   }
-  background-color: #f4fff8;
+  background-color: #f9e3dc;
   p {
     font-size: 1.2em;
     text-align: center;
@@ -481,13 +483,13 @@ nav {
     padding: 5em;
     h1 {
       font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
   }
   @media (max-width: 700px) {
     h1 {
       font-size: 2rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     padding: 1em;
   }
@@ -574,18 +576,28 @@ nav {
       }
     }
   }
+  .animate-on-scroll {
+    transform: scale(0.7);
+    transition: transform 1s ease-in-out;
+  }
 }
 
 .commuity {
   .main {
     margin: auto;
-    @media (max-width: 700px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .blur-load {
       img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    @media (max-width: 700px) {
+      width: 100%;
+      .blur-load {
         transform: scale(0.7);
         width: 80%;
         height: 15em;
@@ -594,26 +606,24 @@ nav {
       }
     }
     @media (min-width: 700px) {
-      display: grid;
-      width: 70%;
-      grid-template-columns: repeat(3, 1fr);
-      img {
+      .blur-load {
         transform: scale(0.7);
         transition: transform 1s ease-in-out;
       }
-      .img:nth-of-type(1) img {
+      .img:nth-of-type(1) {
         transform: translateX(-70px);
         transition: transform 1s ease-in-out;
       }
-      .img:nth-of-type(2) img {
+      .img:nth-of-type(2) {
         transform: translateX(70px);
         transition: transform 1s ease-in-out;
       }
       .animate {
         transform: scale(1) translateX(0) !important;
       }
-      img {
+      .blur-load {
         width: 350px;
+        height: 500px;
         margin: 1em;
       }
       .img {
@@ -638,13 +648,13 @@ nav {
     padding: 5em;
     h1 {
       font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
   }
   @media (max-width: 700px) {
     h1 {
       font-size: 2rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     padding: 1em;
   }
@@ -667,7 +677,7 @@ nav {
     }
     @media (max-width: 700px) {
       height: 60%;
-      width: 60%;
+      width: 65%;
     }
     background-color: #f4fff8;
     border-radius: 10px;
@@ -693,19 +703,35 @@ nav {
           height: 100px;
           margin: 0.1em;
           p {
-            text-align: center;
+            @media (min-width: 700px) {
+              font-size: 1.2em;
+              text-align: center;
+            }
+            @media (max-width: 700px) {
+              font-size: 1em;
+            }
             font-size: 1.2em;
             font-weight: 900;
             margin: 0;
           }
           img {
-            width: 100px;
+            @media (min-width: 700px) {
+              width: 100px;
+              height: 100px;
+            }
+            @media (max-width: 700px) {
+              width: 70px;
+              height: 70px;
+            }
             border-radius: 50%;
-            height: 100px;
             border-radius: 50%;
           }
         }
       }
+    }
+    .animate-on-scroll {
+      transform: scale(0.7);
+      transition: transform 1s ease-in-out;
     }
   }
 
@@ -725,7 +751,7 @@ nav {
     padding: 5em;
     h1 {
       font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     .align {
       display: flex;
@@ -746,7 +772,7 @@ nav {
   @media (max-width: 700px) {
     h1 {
       font-size: 2rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     padding: 1em;
     .align {
@@ -783,7 +809,7 @@ nav {
     padding: 5em;
     h1 {
       font-size: 3rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     .align {
       display: flex;
@@ -796,7 +822,7 @@ nav {
   @media (max-width: 700px) {
     h1 {
       font-size: 2rem;
-      font-family: "Cedarville Cursive", cursive;
+      font-family: "Pacifico", cursive;
     }
     padding: 1em;
     .align {
@@ -854,9 +880,13 @@ nav {
   justify-content: center;
   align-items: center;
   overflow-x: auto;
-  h1 {
-    font-size: 3rem;
-    font-family: "Cedarville Cursive", cursive;
+  h2 {
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 }
 

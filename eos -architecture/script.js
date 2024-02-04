@@ -81,19 +81,19 @@ const makeReviewsElements = () => {
         },
         {
             review: "Being a part of Eos Architecture's projects has been an enriching experience. Their commitment to sustainable design and harmonious coexistence with the environment is truly commendable.",
-            user: "Charlie Thompson"
+            user: "Rohan Verma"
         },
         {
             review: "The workshops at Eos Architecture are both educational and enjoyable. The hands-on approach to natural building techniques has empowered me to contribute positively to our environment.",
-            user: "Olivia Davis"
+            user: "Charlie Thompson"
         },
         {
             review: "Studio Eos' projects showcase a unique blend of creativity and sustainability. The team's dedication to creating timeless architectural marvels is evident in every project they undertake.",
-            user: "Daniel Miller"
+            user: "Olivia Davis"
         },
         {
             review: "I discovered Eos Architecture through their engaging community events. The sense of belonging and shared passion for natural building make it more than just an architecture studio—it's a family.",
-            user: "Sophia Wright"
+            user: "Aarav Sharma"
         },
         {
             review: "Eos Architecture's commitment to using natural pigments and sustainable materials in their projects reflects a deep respect for the Earth. Their work goes beyond aesthetics, embodying principles of environmental consciousness.",
@@ -101,19 +101,19 @@ const makeReviewsElements = () => {
         },
         {
             review: "Attending Eos Architecture's workshops was a game-changer for me. The team's expertise and the variety of content in each workshop made the learning experience both enjoyable and valuable.",
-            user: "Emma Martinez"
+            user: "Priya Desai"
         },
         {
             review: "The community at Eos Architecture is vibrant and supportive. The shared enthusiasm for eco-friendly design creates an environment where ideas flourish, and collaborations thrive.",
-            user: "Ryan Brooks"
+            user: "Kavya Reddy"
         },
         {
             review: "Studio Eos' dedication to natural building techniques is evident in the Ashreya project at Yaksha Forest Garden. The result is not just a building; it's a testament to sustainable living.",
-            user: "Lily Turner"
+            user: "Sophia Wright"
         },
         {
             review: "Meeting the team at Eos Architecture was a pleasure. Their passion for natural building and commitment to a zero-cement approach make them leaders in the field. Proud to have collaborated with them.",
-            user: "Maxwell Clark"
+            user: "Daniel Miller"
         }
     ];
     for (let i = 0; i < reviews.length; i++) {
@@ -181,7 +181,7 @@ function moveCarousel(direction) {
     setInterval(() => moveCarousel(1), interval);
 // } catch (err) { }
 
-// appElement && appElement.scrollTo({
-//     top: document.querySelector('.commuity').getBoundingClientRect().top-100,
-//     behavior: "smooth"
-// });
+appElement && appElement.scrollTo({
+    top: document.querySelector('.meet-team').getBoundingClientRect().top-100,
+    behavior: "smooth"
+});
