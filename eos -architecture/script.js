@@ -181,7 +181,7 @@ function moveCarousel(direction) {
     setInterval(() => moveCarousel(1), interval);
 // } catch (err) { }
 
-appElement && appElement.scrollTo({
-    top: document.querySelector('.meet-team').getBoundingClientRect().top-100,
-    behavior: "smooth"
-});
+// appElement && appElement.scrollTo({
+//     top: document.querySelector('.meet-team').getBoundingClientRect().top-100,
+//     behavior: "smooth"
+// });
