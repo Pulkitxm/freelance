@@ -168,9 +168,9 @@ function moveCarousel(direction) {
 try {
     window.addEventListener("load", () => {
         setTimeout(() => {
-            // document.querySelector('#loading').style.opacity = '0';
-            // document.querySelector('#loading').style.zIndex = '0';
-            // document.querySelector('#loading').style.display = 'none';
+            document.querySelector('#loading').style.opacity = '0';
+            document.querySelector('#loading').style.zIndex = '0';
+            document.querySelector('#loading').style.display = 'none';
         }, 2000);
     })
     handleScroll();
