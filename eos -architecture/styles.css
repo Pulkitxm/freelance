@@ -606,16 +606,18 @@ nav {
       }
     }
     @media (min-width: 700px) {
-      .blur-load {
+      .blur-load:nth-of-type(2) {
         transform: scale(0.7);
+      }
+      .blur-load {
         transition: transform 1s ease-in-out;
       }
       .img:nth-of-type(1) {
-        transform: translateX(-70px);
+        transform: translateX(-70px) scale(1);
         transition: transform 1s ease-in-out;
       }
-      .img:nth-of-type(2) {
-        transform: translateX(70px);
+      .img-2 {
+        transform: translateX(70px) scale(1);
         transition: transform 1s ease-in-out;
       }
       .animate {
