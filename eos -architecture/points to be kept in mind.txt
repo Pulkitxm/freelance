@@ -17,14 +17,10 @@ given a sketch(stars moving on it as on https://indigodesign.in)
 eosdesign.studio
 
 
-parallax between two sections
-testimonials carousle
-insta post latest with text coming on hover ( above contact page )
-mobile dsign conjusted
-no corner 
-testimonails bg dark
-products remove for now
-
-first task
-animate all the image (seperate for mobile and desktop)
-blur-load for all the images
+ |✓| parallax between two sections
+ |✓| testimonials carousle
+ |X| insta post latest with text coming on hover ( above contact page )
+ |✓| mobile dsign conjusted
+ |✓| no corner 
+ |✓| testimonails bg dark
+ |✓| products remove for now
