@@ -1,0 +1,26 @@
+this is a website related to architecture
+features 
+- free from cement
+- conduct workshops
+figma - https://www.figma.com/file/W0zp4ntsDYTifby0VJOySs/website-eos?type=design&node-id=1-106&mode=design&t=KvOWCMFZOXHTqMqE-0
+design inspiration
+https://www.dhun.life/
+https://indigodesign.in/
+https://geelimitti.in/
+
+nav to be fixed
+parllax effect
+testimonials auto move carousel
+given a sketch(stars moving on it as on https://indigodesign.in)
+
+
+eosdesign.studio
+
+
+ |✓| parallax between two sections
+ |✓| testimonials carousle
+ |X| insta post latest with text coming on hover ( above contact page )
+ |✓| mobile dsign conjusted
+ |✓| no corner 
+ |✓| testimonails bg dark
+ |✓| products remove for now

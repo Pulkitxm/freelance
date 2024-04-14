@@ -25,7 +25,8 @@ const handleScroll = () => {
     arrow.style.animation = (scrollPosition === 0) ? 'showUpRev 1s forwards' : 'hideDownRev 2s forwards';
 
     //changing nav styles
-    const isScrolledTop = scrollPosition < 5;
+    // const isScrolledTop = scrollPosition < 5;
+    const isScrolledTop = false;
     navElement.style.background = isScrolledTop ? 'transparent' : '#D69F7E';
     navElement.style.borderBottom = isScrolledTop ? 'solid 2px #ffffff98' : null;
     navElement.style.color = isScrolledTop ? 'white' : '#28282B';
@@ -219,6 +220,6 @@ try {
 } catch (err) { }
 
 appElement && appElement.scrollTo({
-    top: document.querySelector('#community').getBoundingClientRect().top-0,
+    top: document.querySelector('#workshops').getBoundingClientRect().top-0,
     behavior: "smooth"
 });

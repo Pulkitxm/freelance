@@ -314,7 +314,7 @@ nav {
     object-fit: cover;
     z-index: -5;
     transform: translateZ(var(--perspectiveValNag)) scale(2);
-    filter: brightness(70%);
+    /* filter: brightness(70%); */
   }
 
   .overlay {
@@ -475,6 +475,9 @@ nav {
   p {
     font-size: 1.2em;
     text-align: center;
+  }
+  .blur-load img{
+    /* object-fit: contain; */
   }
 }
 
@@ -1011,9 +1014,6 @@ nav {
   }
 }
 
-.popup-image{
-  transition: all .5s;
-}
 #pop:checked  ~ label .popup-image{
   cursor: zoom-out;
   position: fixed;
