@@ -219,7 +219,7 @@ try {
     setInterval(() => moveCarousel(1), interval);
 } catch (err) { }
 
-appElement && appElement.scrollTo({
-    top: document.querySelector('#community').getBoundingClientRect().top-0,
-    behavior: "smooth"
-});
+// appElement && appElement.scrollTo({
+//     top: document.querySelector('#community').getBoundingClientRect().top-0,
+//     behavior: "smooth"
+// });
