@@ -220,6 +220,6 @@ try {
 } catch (err) { }
 
 appElement && appElement.scrollTo({
-    top: document.querySelector('#workshops').getBoundingClientRect().top-0,
+    top: document.querySelector('#community').getBoundingClientRect().top-0,
     behavior: "smooth"
 });
