@@ -391,6 +391,7 @@ nav {
         height: 25em;
         margin: 0;
         .blur-load {
+          margin-top: 4em;
           width: 100%;
           height: 100%;
           border-radius: 10px;
@@ -411,6 +412,7 @@ nav {
         width: 100%;
         display: flex;
         justify-content: center;
+        flex-direction: column;
       }
       .txt p {
         font-size: 1em;
@@ -498,7 +500,9 @@ nav {
     margin-top: 0.5em;
   }
   .align {
-    margin-top: 3em;
+    @media (min-width: 700px) {
+      margin-top: 7em;
+    }
     display: flex;
     @media (max-width: 700px) {
       flex-direction: column;
@@ -588,8 +592,10 @@ nav {
       font-size: 3rem;
       font-family: "Pacifico", cursive;
     }
+    /* height: 100svh; */
   }
   @media (max-width: 700px) {
+    padding:2em 0;
     h1 {
       font-size: 2rem;
       font-family: "Pacifico", cursive;
@@ -600,7 +606,6 @@ nav {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100svh;
   .main{
     gap: 20px;
     @media (min-width: 1100px) {
@@ -611,7 +616,7 @@ nav {
       grid-template-rows: repeat(2,1fr);
     }
     @media (max-width: 1100px) {
-      width: 70%;
+      width: 80%;
       height: auto;
       display: flex;
       flex-direction: column;

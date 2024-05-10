@@ -33,8 +33,10 @@ const handleScroll = () => {
 };
 const navigate = (e) => {
     const element = document.getElementById(e.target.dataset.link);
+    console.log(element);
     if (element) {
-        element.scrollIntoView({
+        appElement.scrollTo({
+            top: element.getBoundingClientRect().top + appElement.scrollTop-30,
             behavior: "smooth"
         });
     }
@@ -220,6 +222,6 @@ try {
 } catch (err) { }
 
 // appElement && appElement.scrollTo({
-//     top: document.querySelector('#community').getBoundingClientRect().top-0,
+//     top: document.querySelector('#about').getBoundingClientRect().top,
 //     behavior: "smooth"
 // });
