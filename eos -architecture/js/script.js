@@ -194,13 +194,13 @@ const popUpImage = () => {
 };
 
 try {
-    // window.addEventListener("load", () => {
-    //     setTimeout(() => {
-    //         document.querySelector('#loading').style.opacity = '0';
-    //         document.querySelector('#loading').style.zIndex = '0';
-    //         document.querySelector('#loading').style.display = 'none';
-    //     }, 2000);
-    // })
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            document.querySelector('#loading').style.opacity = '0';
+            document.querySelector('#loading').style.zIndex = '0';
+            document.querySelector('#loading').style.display = 'none';
+        }, 2000);
+    })
     handleScroll();
     loadBlurryImages();
     arrow.addEventListener('click', () => appElement.scrollTo({ top: window.innerHeight - 50, behavior: "smooth" }));
