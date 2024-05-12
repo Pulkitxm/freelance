@@ -210,6 +210,6 @@ try {
 } catch (err) { }
 
 // appElement && appElement.scrollTo({
-//     top: document.querySelector('.testimonials').getBoundingClientRect().top-70,
+//     top: document.querySelector('#meet-team').getBoundingClientRect().top-70,
 //     behavior: "smooth"
 // });
