@@ -59,7 +59,7 @@
 .gallery-cell {
   width: 66%;
   @media (max-width: 900px) {
-    height: 30em;
+    height: 35em;
   }
   @media (min-width: 900px) {
     height: 18em;
