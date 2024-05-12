@@ -33,7 +33,6 @@ const handleScroll = () => {
 };
 const navigate = (e) => {
     const element = document.getElementById(e.target.dataset.link);
-    console.log(element);
     if (element) {
         appElement.scrollTo({
             top: element.getBoundingClientRect().top + appElement.scrollTop-30,
@@ -80,51 +79,30 @@ const makeReviewsElements = () => {
     const reviewContainer = reviewItem.parentElement;
     const reviews = [
         {
-            review: "Eos Architecture has transformed my perspective on natural building. Their workshops are insightful, and the community they've built is inspiring. I'm proud to be a part of this eco-friendly journey.",
-            user: "Alice Johnson"
+            review: "Enrolling for the natural building workshop with EOS Design Studio has given me a new perspective towards organic living. I have learnt about building techniques which not only makes the structure look beautiful but they also minimize environmental impact. Their hands-on approach and their commitment to build structures sustainably was both educational and empowering. Here's to building not just structures but a sustainable future.",
+            user: "Preeti Girkar, Performer"
         },
         {
-            review: "Being a part of Eos Architecture's projects has been an enriching experience. Their commitment to sustainable design and harmonious coexistence with the environment is truly commendable.",
-            user: "Rohan Verma"
+            review: "Attending the natural building workshop organized by EOS design was an unparalleled learning journey. Immersed in seven days of hands-on experience, I developed a deep affection for the materials and techniques of natural building. Saumya's insightful explanations at every step enriched my understanding and sparked a realization: it's never too late to contribute to the planet's well-being. Beyond the invaluable lessons, the genuine warmth extended to us made the entire experience truly memorable.",
+            user: "Riya Bissa, Architect"
         },
         {
-            review: "The workshops at Eos Architecture are both educational and enjoyable. The hands-on approach to natural building techniques has empowered me to contribute positively to our environment.",
-            user: "Charlie Thompson"
+            review: "EOS is an amazing space built by Saumya with much love, care and lots of experience. I first visited the studio for a workshop. As a lawyer, I absolutely had no business with architecture and I thought it would be tough to understand anything about natural building. But while working at the studio I was able to learn quite a lot about natural building. It really is a place for anyone and everyone, whoever is interested in sustainable lifestyles and exploring their surroundings more deeply!!",
+            user: "Rohan Jain, Lawyer"
         },
         {
-            review: "Studio Eos' projects showcase a unique blend of creativity and sustainability. The team's dedication to creating timeless architectural marvels is evident in every project they undertake.",
-            user: "Olivia Davis"
+            review: "I did my first work shop with Saumya in February and it was an amazing experience. We experimented cob house techniques with theory and practice. You can go eyes closed to her workshop because she is professional and hard-worker. We will definitely come again to participate to others workshops with her and her team.",
+            user: "Clemence, Social Worker "
         },
-        {
-            review: "I discovered Eos Architecture through their engaging community events. The sense of belonging and shared passion for natural building make it more than just an architecture studio—it's a family.",
-            user: "Aarav Sharma"
-        },
-        {
-            review: "Eos Architecture's commitment to using natural pigments and sustainable materials in their projects reflects a deep respect for the Earth. Their work goes beyond aesthetics, embodying principles of environmental consciousness.",
-            user: "James Harris"
-        },
-        {
-            review: "Attending Eos Architecture's workshops was a game-changer for me. The team's expertise and the variety of content in each workshop made the learning experience both enjoyable and valuable.",
-            user: "Priya Desai"
-        },
-        {
-            review: "The community at Eos Architecture is vibrant and supportive. The shared enthusiasm for eco-friendly design creates an environment where ideas flourish, and collaborations thrive.",
-            user: "Kavya Reddy"
-        },
-        {
-            review: "Studio Eos' dedication to natural building techniques is evident in the Ashreya project at Yaksha Forest Garden. The result is not just a building; it's a testament to sustainable living.",
-            user: "Sophia Wright"
-        },
-        {
-            review: "Meeting the team at Eos Architecture was a pleasure. Their passion for natural building and commitment to a zero-cement approach make them leaders in the field. Proud to have collaborated with them.",
-            user: "Daniel Miller"
-        }
     ];
     for (let i = 0; i < reviews.length; i++) {
         const clone = reviewItem.cloneNode(true);
-        clone.querySelector('.card-text').innerText = "'' " + reviews[i].review + " ''";
+        clone.querySelector('.card-text').innerText = "''" + reviews[i].review + "''";
         clone.querySelector('.card-footer').innerText = '- ' + reviews[i].user;
         reviewContainer.appendChild(clone);
+        if(i===0){
+            clone.classList.add("highlight-carousel");
+        }
     }
     reviewItem.remove();
 }
@@ -222,6 +200,6 @@ try {
 } catch (err) { }
 
 // appElement && appElement.scrollTo({
-//     top: document.querySelector('#about').getBoundingClientRect().top,
+//     top: document.querySelector('.testimonials').getBoundingClientRect().top+50,
 //     behavior: "smooth"
 // });

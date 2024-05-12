@@ -343,7 +343,7 @@ nav {
     transform: scale(0.7);
     transition: transform 1s ease-in-out;
   }
-  @media (min-width: 700px) {
+  @media (min-width: 1220px) {
     padding: 5em;
     h1 {
       font-size: 3rem;
@@ -356,7 +356,7 @@ nav {
       font-size: 2rem;
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 1220px) {
     padding: 1em;
     h1 {
       font-size: 2.5rem;
@@ -370,24 +370,29 @@ nav {
     }
   }
   background-color: #f6f6f6;
-
   .desc {
     display: flex;
     .txt {
       width: 50%;
-      font-size: 1.3em;
-      h2 {
-        font-size: 1.7rem;
-      }
+      font-size: 1.1em;
     }
-    @media (min-width: 700px) {
+    @media (min-width: 1220px) {
       justify-content: space-between;
       h1 {
         font-size: 2.5rem;
         font-family: "Pacifico", cursive;
       }
+      .txt{
+        padding-top: 3em;
+      }
+      .txt h2{
+        font-size: 1.1em;
+      }
+      .txt p{
+        font-size: 1.1em;
+      }
       .sketch {
-        width: 35em;
+        width: 45em;
         height: 25em;
         margin: 0;
         .blur-load {
@@ -403,7 +408,7 @@ nav {
         transform: translateY(-100px);
       }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 1220px) {
       justify-content: center;
       flex-direction: column;
       align-items: center;
@@ -413,12 +418,15 @@ nav {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        h2{
+          font-size: 1.1em;
+        }
       }
       .txt p {
         font-size: 1em;
       }
       .sketch {
-        width: 25em;
+        width: 20em;
         .blur-load {
           width: 80%;
           height: 80%;
@@ -473,9 +481,18 @@ nav {
     padding: 1em;
   }
   background-color: #f9e3dc;
+  background-color: #f5f5f5;
   p {
     font-size: 1.2em;
     text-align: center;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 1em auto;
+    }
+    @media (min-width: 768px) {
+      width: 70%;
+      margin: 1em auto;
+    }
   }
 }
 
@@ -502,6 +519,7 @@ nav {
   .align {
     @media (min-width: 700px) {
       margin-top: 7em;
+      overflow: hidden;
     }
     display: flex;
     @media (max-width: 700px) {
@@ -538,8 +556,8 @@ nav {
       @media (min-width: 700px) {
         width: 50%;
         .blur-load {
-          width: 30em;
-          height: 40em;
+          width: 40em;
+          height: 64em;
           img {
             width: 100% !important;
             height: 100% !important;
@@ -633,7 +651,16 @@ nav {
       width: 100%;
     }
   }
+  p {
+    @media (min-width: 1100px) {
+      width: 70%;
+    }
+    @media (max-width: 1100px) {
+      width: 80%;
+    }
+  }
   background-color: #f9e3dc;
+  background-color: #f5f5f5;
 }
 
 .meet-team {
@@ -849,7 +876,7 @@ nav {
 
 .testimonials {
   background-color: #f4fff8;
-  height: 30em;
+  height: 55em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -868,7 +895,6 @@ nav {
 #reviews {
   display: flex !important;
   margin-top: 2em;
-
   .review {
     margin: 1em;
   }
@@ -1062,6 +1088,7 @@ nav {
 }
 .pop-up-image{
   cursor: zoom-in;
+  /* position: absolute; */
 }
 @keyframes comesUp {
   from{

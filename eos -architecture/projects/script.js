@@ -23,7 +23,6 @@ const loadBlurryImages = () => {
     })
 }
 const handleSmallNavAndResize = () => {
-    console.log("called");
     const collapsible = navElement.querySelector(".collapsible");
     const openNav = () => {
         collapsible.classList.add("open");

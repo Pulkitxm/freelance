@@ -52,16 +52,17 @@
 }
 
 .gallery > .flickity-page-dots {
-  bottom: 10px;
+  bottom: -180px;
+  display: none;
 }
 
 .gallery-cell {
   width: 66%;
-  @media (max-width: 768px) {
-    height: 18em;
+  @media (max-width: 900px) {
+    height: 30em;
   }
-  @media (min-width: 768px) {
-    height: 13em;
+  @media (min-width: 900px) {
+    height: 18em;
   }
   border-radius: 10px;
   margin-right: 10px;
@@ -83,4 +84,9 @@
   @media (min-width: 768px) {
     font-size: 1.2em;
   }
+  transform: scale(.8);
+}
+.highlight-carousel {
+  transform: scale(1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
