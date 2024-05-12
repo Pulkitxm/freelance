@@ -531,10 +531,11 @@ nav {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
 
     .left {
-      height: 500px !important;
+      height: 800px !important;
       @media (max-width: 700px) {
         width: 100%;
         display: flex;
@@ -545,7 +546,7 @@ nav {
           margin-bottom: 1em;
         }
         .blur-load {
-          width: 20em;
+          width: 45em;
           height: 20em;
           img {
             width: 100% !important;
@@ -557,7 +558,7 @@ nav {
         width: 50%;
         .blur-load {
           width: 40em;
-          height: 64em;
+          height: 164em;
           img {
             width: 100% !important;
             height: 100% !important;
@@ -876,11 +877,12 @@ nav {
 
 .testimonials {
   background-color: #f4fff8;
-  height: 60em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @media (max-width: 768px) {
+    height: 50em;
+  }
+  @media (min-width: 768px) {
+    height: 30em;
+  }
   overflow-x: auto;
   h2 {
     @media (max-width: 768px) {
@@ -890,6 +892,9 @@ nav {
       font-size: 1.5rem;
     }
   }
+}
+.highlight-mob {
+  transform: scale(.9);
 }
 
 #reviews {

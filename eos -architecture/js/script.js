@@ -100,8 +100,12 @@ const makeReviewsElements = () => {
         clone.querySelector('.card-text').innerText = "''" + reviews[i].review + "''";
         clone.querySelector('.card-footer').innerText = '- ' + reviews[i].user;
         reviewContainer.appendChild(clone);
-        if(i===0){
+        const isMobile= /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if(i===0 && !isMobile){
             clone.classList.add("highlight-carousel");
+        } 
+        if(isMobile){
+            clone.classList.add("highlight-mob");
         }
     }
     reviewItem.remove();
@@ -179,6 +183,12 @@ try {
             document.querySelector('#loading').style.display = 'none';
         }, 2000);
     })
+    document.addEventListener('DOMContentLoaded', function () {
+        new LocomotiveScroll({
+            el: document.querySelector('.app'),
+            smooth: true
+        });
+    });
     handleScroll();
     loadBlurryImages();
     arrow.addEventListener('click', () => appElement.scrollTo({ top: window.innerHeight - 50, behavior: "smooth" }));
@@ -200,6 +210,6 @@ try {
 } catch (err) { }
 
 // appElement && appElement.scrollTo({
-//     top: document.querySelector('.testimonials').getBoundingClientRect().top+70,
+//     top: document.querySelector('.testimonials').getBoundingClientRect().top-70,
 //     behavior: "smooth"
 // });
