@@ -176,13 +176,13 @@ const popUpImage = () => {
 };
 
 try {
-    // window.addEventListener("load", () => {
-    //     setTimeout(() => {
-    //         document.querySelector('#loading').style.opacity = '0';
-    //         document.querySelector('#loading').style.zIndex = '0';
-    //         document.querySelector('#loading').style.display = 'none';
-    //     }, 2000);
-    // })
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            document.querySelector('#loading').style.opacity = '0';
+            document.querySelector('#loading').style.zIndex = '0';
+            document.querySelector('#loading').style.display = 'none';
+        }, 2000);
+    })
     document.addEventListener('DOMContentLoaded', function () {
         new LocomotiveScroll({
             el: document.querySelector('.app'),
@@ -209,7 +209,7 @@ try {
     setInterval(() => moveCarousel(1), interval);
 } catch (err) { }
 
-appElement && appElement.scrollTo({
-    top: document.querySelector('#meet-team').getBoundingClientRect().top-70,
-    behavior: "smooth"
-});
+// appElement && appElement.scrollTo({
+//     top: document.querySelector('#meet-team').getBoundingClientRect().top-70,
+//     behavior: "smooth"
+// });
