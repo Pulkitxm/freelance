@@ -44,7 +44,7 @@
 .gallery {
   width: 100%;
   @media (max-width: 768px) {
-    height: 22em !important;
+    height: 30em !important;
   }
   @media (min-width: 768px) {
     height: 20em !important;
@@ -84,9 +84,18 @@
   @media (min-width: 768px) {
     font-size: 1.2em;
   }
-  transform: scale(.8);
+}
+.gallery-cell-right {
+  transform: scale(.8) translateX(-200px) ;
+}
+.gallery-cell-left {
+  transform: scale(.8) translateX(200px) ;
 }
 .highlight-carousel {
   transform: scale(1);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 55;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.flickity-viewport{
+  height: 400px !important;
 }
