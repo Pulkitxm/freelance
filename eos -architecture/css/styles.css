@@ -535,7 +535,6 @@ nav {
     }
 
     .left {
-      height: 800px !important;
       @media (max-width: 700px) {
         width: 100%;
         display: flex;
@@ -555,6 +554,7 @@ nav {
         }
       }
       @media (min-width: 700px) {
+        height: 800px !important;
         width: 50%;
         .blur-load {
           width: 40em;
@@ -878,10 +878,11 @@ nav {
 .testimonials {
   background-color: #f4fff8;
   @media (max-width: 768px) {
-    height: 50em;
+    height: 40em;
   }
   @media (min-width: 768px) {
     height: 30em;
+    overflow: hidden;
   }
   overflow-x: auto;
   h2 {

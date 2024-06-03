@@ -34,8 +34,6 @@ class Position {
 }
 
 function changeHighlight(a, b, c, d) {
-    console.log("left", c);
-    console.log("right", d);
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (!isMobile) {
         if (a) {
