@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <nav class="bg-white border-[#d69f7e] dark:bg-[#d69f7e] dark:border-[#d69f7e]">
+    <nav class="fixed top-0 w-screen z-50 bg-white border-[#d69f7e] dark:bg-[#d69f7e] dark:border-[#d69f7e]">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="./assets/nav-logo.png" class="h-10" alt="logo" />
+                <img src="./assets/nav-logo.webp" class="h-10" alt="logo" />
             </a>
             <button data-collapse-toggle="navbar-dropdown" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden  focus:outline-none opacity-50 hover:opacity-100 transition-opacity duration-300"
@@ -61,6 +61,23 @@
             </div>
         </div>
     </nav>
+
+    <div class="relative h-screen overflow-hidden">
+        <div class="absolute inset-0 bg-no-repeat bg-cover 
+                    bg-fixed parallax-bg" style="background-image: url('./assets/hero-banner.webp');">
+        </div>
+        <div class="absolute inset-0 flex flex-col justify-center text-white text-2xl p-5">
+            <p>Natural building is an artform.</p>
+            <p>We are all artists at eos design</p>
+            <p>studio and we invite you to get your hands muddy!</p>
+        </div>
+    </div>
+
+    <div class="h-screen"></div>
+    <div class="h-screen"></div>
+    <div class="h-screen"></div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
