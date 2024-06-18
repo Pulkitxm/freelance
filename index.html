@@ -1,81 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eos-Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap"
+    />
+  </head>
 
-<body>
-    <nav class="fixed top-0 w-screen z-50 bg-white border-[#d69f7e] dark:bg-[#d69f7e] dark:border-[#d69f7e]">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <span class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer" id="logo">
-                <img src="./assets/nav-logo.webp" class="h-10" alt="logo" />
-            </span>
-            <button data-collapse-toggle="navbar-dropdown" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden  focus:outline-none opacity-50 hover:opacity-100 transition-opacity duration-300"
-                aria-controls="navbar-dropdown" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="black"
-                    viewBox="0 0 17 14">
-                    <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-            </button>
-            <div class="hidden w-full lg:block md:w-auto" id="navbar-dropdown">
-                <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#d69f7e] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-g[#d69f7e] md:dark:bg-[#d69f7e] dark:border-gray-700">
-                    <li>
-                        <a href="#" style="font-family: 'Bodoni Moda', cursive"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" style="font-family: 'Bodoni Moda', cursive"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">About
-                            us</a>
-                    </li>
-                    <li>
-                        <a href="#" style="font-family: 'Bodoni Moda', cursive"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">Workshops</a>
-                    </li>
-                    <li>
-                        <a href="#" style="font-family: 'Bodoni Moda', cursive"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#" style="font-family: 'Bodoni Moda', cursive"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">Community</a>
-                    </li>
-                    <li>
-                        <a href="#" style="font-family: 'Bodoni Moda', cursive"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">Contact
-                            us</a>
-                    </li>
-                </ul>
-            </div>
+  <body class="bg-[#f6f6f6]">
+    <nav
+      class="fixed top-0 w-screen z-50 bg-white border-[#d69f7e] dark:bg-[#d69f7e] dark:border-[#d69f7e]"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <span
+          class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"
+          id="logo"
+        >
+          <img src="./assets/nav-logo.webp" class="h-10" alt="logo" />
+        </span>
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none opacity-50 hover:opacity-100 transition-opacity duration-300"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="black"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="black"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full lg:block md:w-auto" id="navbar-dropdown">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#d69f7e] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-g[#d69f7e] md:dark:bg-[#d69f7e] dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                style="font-family: 'Bodoni Moda', cursive"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="font-family: 'Bodoni Moda', cursive"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="font-family: 'Bodoni Moda', cursive"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
+                >Workshops</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="font-family: 'Bodoni Moda', cursive"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="font-family: 'Bodoni Moda', cursive"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
+                >Community</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="font-family: 'Bodoni Moda', cursive"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
+                >Contact us</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <div class="relative h-screen overflow-hidden">
-        <div class="absolute inset-0 bg-no-repeat bg-cover 
-                    bg-fixed parallax-bg" style="background-image: url('./assets/hero-banner.webp');">
+    <main>
+      <section id="hero-section" class="relative h-screen overflow-hidden">
+        <div
+          class="absolute inset-0 bg-no-repeat bg-cover bg-fixed parallax-bg"
+          style="background-image: url('./assets/hero-banner.webp')"
+        ></div>
+        <div
+          class="absolute inset-0 flex flex-col justify-center text-white text-2xl p-5"
+        >
+          <p>Natural building is an artform.</p>
+          <p>We are all artists at eos design</p>
+          <p>studio and we invite you to get your hands muddy!</p>
         </div>
-        <div class="absolute inset-0 flex flex-col justify-center text-white text-2xl p-5">
-            <p>Natural building is an artform.</p>
-            <p>We are all artists at eos design</p>
-            <p>studio and we invite you to get your hands muddy!</p>
+      </section>
+
+      <section id="about-us" class="flex flex-col p-10 items-center">
+        <h1 class="section-header text-5xl font-extrabold">About us</h1>
+        <div class="flex justify-between items-center">
+          <div class="p-5 w-[30%]">
+            <h1 class="text-3xl font-bold">Our mission</h1>
+            <p class="text-xl mt-1">
+              We are an architecture studio with a twist! Our mission is to
+              spread awareness about natural building through our work and build
+              a community while we are at it.
+            </p>
+          </div>
+          <div
+            class="w-[70%] h-[500px] bg-cover bg-center bg-no-repeat object-cover rounded-lg"
+            style="background-image: url('./assets/projects/studio.webp')"
+          ></div>
         </div>
-    </div>
+        <div class="p-5 flex flex-col space-y-4">
+          <h1 class="text-3xl font-bold">Natural Building</h1>
+          <p class="text-xl">
+            Natural buildings are more than just structures; they're captivating
+            expressions of creativity that effortlessly blend human innovation
+            with the unspoiled allure of nature. Rooted in a commitment to
+            sustainability and a profound reverence for the planet, these
+            architectural wonders epitomize a harmonious relationship between
+            human constructions and the surrounding environment.
+          </p>
+          <p class="text-xl">
+            They often showcase ingenious methods that utilize natural elements
+            for heating, cooling, and lighting, forging a deep connection with
+            the Earth's cycles. Serving as both functional spaces and works of
+            art, they embody the timeless principles of sustainability, boasting
+            an aesthetic that transcends passing trends.
+          </p>
+        </div>
+      </section>
+    </main>
 
-    <div class="h-screen"></div>
-    <div class="h-screen"></div>
-    <div class="h-screen"></div>
-
-    <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script> 
-    <script src="./script.js"></script>
-</body>
+    <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+    <script src="./scripts/index.js" type="module"></script>
+  </body>
 </html>
