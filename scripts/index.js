@@ -1,5 +1,6 @@
 import "./scroll.js";
 import "./parallax.js";
+import "./lighGallery.js";
 
 // nav scroll action
 const navLogo = document.querySelector("#logo");

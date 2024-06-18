@@ -32,6 +32,13 @@
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css"
+      integrity="sha512-LFWtdAXHQuwUGH9cImO9blA3a3GfQNkpF2uRlhaOpSbDevNyK1rmAjs13mtpjvWyi+flP7zYWboqY+8Mkd42xA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body class="bg-[#f6f6f6]">
@@ -242,38 +249,114 @@
       <section id="projects" class="flex flex-col p-10 items-center">
         <h1 class="section-header text-5xl font-extrabold mb-10">Projects</h1>
         <div
-          class="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 space-x-10 space-y-10 h-[1200px] md:h-[calc(100vh-200px)] xl:w-[70%] w-full overflow-hidden"
+          class="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 space-x-10 xl:space-x-20 items-center space-y-10 h-[1200px] md:h-[calc(100vh-200px)] xl:w-[70%] w-full overflow-hidden"
         >
           <div
             class="flex items-center justify-center flex-col row-start-1 row-end-2 col-start-1 col-end-2 md:row-start-1 md:row-end-3 md:col-start-1 md:col-end-2 w-full h-full"
           >
-            <h1 class="text-2xl mb-3">Studio Eos</h1>
             <div
               style="
                 background-image: url('./assets/projects/proj-studio.webp');
               "
               class="w-full h-full bg-cover bg-center bg-no-repeat object-cover rounded-lg"
             ></div>
+            <h1 class="text-2xl mt-3">Studio Eos</h1>
           </div>
           <div
             class="flex items-center justify-center flex-col row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 w-full h-full py-10"
           >
-            <h1 class="text-2xl">Ashreya at Yaksha Forest garden</h1>
             <div
               style="
                 background-image: url('./assets/projects/Ashreya Sketch.webp');
               "
               class="w-full h-full bg-cover bg-center bg-no-repeat object-cover rounded-lg"
             ></div>
+            <h1 class="text-2xl">Ashreya at Yaksha Forest garden</h1>
           </div>
           <div
             class="flex items-center justify-center flex-col row-end-4 col-start-1 col-end-2 md:row-start-2 md:row-end-3 md:col-start-2 md:col-end-3 w-full h-full"
           >
+            <div
+              style="background-image: url('./assets/projects/studio.webp')"
+              class="w-full h-full bg-cover bg-center bg-no-repeat object-cover rounded-lg"
+            ></div>
             <h1 class="text-2xl">NeemBagh Cafe</h1>
-            <div style=" background-image: url('./assets/projects/studio.webp');
-            " class="w-full h-full bg-cover bg-center bg-no-repeat object-cover
-            rounded-lg"
           </div>
+        </div>
+      </section>
+
+      <section id="community" class="flex flex-col p-10 items-center">
+        <h1 class="section-header text-5xl font-extrabold mb-10">Community</h1>
+
+        <div
+          class="pswp-gallery grid grid-cols-3 grid-rows-2 h-[1200px] md:h-[calc(100vh-200px)] xl:w-[70%] w-full"
+          id="my-gallery"
+        >
+          <a
+            href="./assets/community/community-1.webp"
+            data-pswp-width="1000"
+            data-pswp-height="700"
+            target="_blank"
+            class="m-3 row-start-1 row-end-2 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-2 rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/community/community-1.webp"
+              class="w-full h-full aspect-square object-cover"
+              alt=""
+            />
+          </a>
+          <a
+            href="./assets/community/community-3.webp"
+            data-pswp-width="1000"
+            data-pswp-height="700"
+            target="_blank"
+            class="m-3 row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-2 rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/community/community-3.webp"
+              class="w-full h-full aspect-square object-cover"
+              alt=""
+            />
+          </a>
+          <a
+            href="./assets/community/community-2.webp"
+            data-pswp-width="600"
+            data-pswp-height="700"
+            target="_blank"
+            class="m-3 row-start-3 row-end-4 col-start-1 col-end-2 md:row-start-1 md:row-end-3 md:col-start-2 md:col-end-3 rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/community/community-2.webp"
+              class="w-full h-full aspect-square object-cover"
+              alt=""
+            />
+          </a>
+          <a
+            href="./assets/community/community-4.webp"
+            data-pswp-width="1000"
+            data-pswp-height="700"
+            target="_blank"
+            class="m-3 row-start-4 row-end-5 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-3 md:col-end-4 rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/community/community-4.webp"
+              class="w-full h-full aspect-square object-cover"
+              alt=""
+            />
+          </a>
+          <a
+            href="./assets/community/community-5.webp"
+            data-pswp-width="1000"
+            data-pswp-height="700"
+            target="_blank"
+            class="m-3 row-start-5 row-end-6 col-start-1 col-end-2 md:row-start-2 md:row-end-3 md:col-start-3 md:col-end-4 rounded-lg overflow-hidden"
+          >
+            <img
+              src="./assets/community/community-5.webp"
+              class="w-full h-full aspect-square object-cover"
+              alt=""
+            />
+          </a>
         </div>
       </section>
     </main>
