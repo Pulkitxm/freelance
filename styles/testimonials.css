@@ -63,7 +63,7 @@
 }
 @media (min-width: 768px) {
   .carousel-inner {
-    height: 600px;
+    height: 300px;
     font-size: 16px;
   }
 }

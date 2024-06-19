@@ -39,6 +39,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
 
   <body class="bg-[#f6f6f6]">
@@ -48,12 +53,13 @@
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 pr-10"
       >
-        <span
+        <a
+        href="#"
           class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"
           id="logo"
         >
           <img src="./assets/nav-logo.webp" class="h-10" alt="logo" />
-        </span>
+        </a>
         <button
           data-collapse-toggle="navbar-dropdown"
           type="button"
@@ -80,51 +86,51 @@
         </button>
         <div class="hidden w-full lg:block md:w-auto" id="navbar-dropdown">
           <ul
-            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#d69f7e] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-g[#d69f7e] md:dark:bg-[#d69f7e] dark:border-gray-700"
+            class="nav-items flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#d69f7e] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-g[#d69f7e] md:dark:bg-[#d69f7e] dark:border-gray-700"
           >
-            <li>
+            <li data-section="hero-section">
               <a
-                href="#"
+                href="#hero-section"
                 style="font-family: 'Bodoni Moda', cursive"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
                 >Home</a
               >
             </li>
-            <li>
+            <li data-section="about-us">
               <a
-                href="#"
+                href="#about-us"
                 style="font-family: 'Bodoni Moda', cursive"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
                 >About us</a
               >
             </li>
-            <li>
+            <li data-section="workshops">
               <a
-                href="#"
+                href="#workshops"
                 style="font-family: 'Bodoni Moda', cursive"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
                 >Workshops</a
               >
             </li>
-            <li>
+            <li data-section="projects">
               <a
-                href="#"
+                href="#projects"
                 style="font-family: 'Bodoni Moda', cursive"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
                 >Projects</a
               >
             </li>
-            <li>
+            <li data-section="community">
               <a
-                href="#"
+                href="#community"
                 style="font-family: 'Bodoni Moda', cursive"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
                 >Community</a
               >
             </li>
-            <li>
+            <li data-section="contact">
               <a
-                href="#"
+                href="#contact"
                 style="font-family: 'Bodoni Moda', cursive"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent"
                 >Contact us</a
@@ -388,7 +394,7 @@
       </section>
 
       <section
-        id="contact us"
+        id="contact"
         class="flex flex-col p-10 items-center bg-[#475c4e] text-white p-20"
       >
         <h1 class="section-header text-5xl font-extrabold mb-10">Contact Us</h1>
