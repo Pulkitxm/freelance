@@ -1,4 +1,4 @@
-import "./scroll.js";
+// import "./scroll.js";
 import "./parallax.js";
 import "./lighGallery.js";
 

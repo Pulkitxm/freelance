@@ -135,12 +135,13 @@
       </div>
     </nav>
 
-    <main>
+    <main class="w-full overflow-hidden">
       <section id="hero-section" class="relative h-screen overflow-hidden">
-        <div
-          class="h-screen w-screen absolute inset-0 bg-no-repeat bg-cover bg-fixed parallax-bg"
-          style="background-image: url('./assets/hero-banner.webp')"
-        ></div>
+        <img
+          src="./assets/hero-banner.webp"
+          class="h-screen w-screen absolute inset-0 object-cover bg-fixed parallax-bg"
+          alt=""
+        />
         <div
           class="absolute inset-0 flex flex-col justify-center text-white text-2xl p-5"
         >
@@ -150,11 +151,11 @@
         </div>
       </section>
 
-      <section id="about-us" class="flex flex-col p-10 items-center">
+      <section id="about-us" class="flex flex-col p-10 py-20 items-center">
         <h1 class="section-header text-5xl font-extrabold">About us</h1>
-        <div class="flex justify-between items-center">
-          <div class="p-5 w-[30%]">
-            <h1 class="text-3xl font-bold">Our mission</h1>
+        <div class="flex flex-col md:flex-row w-screen md:w-auto justify-between items-center">
+          <div class="p-2 md:p-5 md:w-[30%]">
+            <h1 class="text-3xl font-bold mt-10 md:mt-0">Our mission</h1>
             <p class="text-xl mt-1">
               We are an architecture studio with a twist! Our mission is to
               spread awareness about natural building through our work and build
@@ -162,12 +163,12 @@
             </p>
           </div>
           <div
-            class="w-[70%] h-[500px] bg-cover bg-center bg-no-repeat object-cover rounded-lg"
+            class="w-[95%] md:w-[70%] h-[300px] md:h-[500px] mt-0 bg-cover bg-center bg-no-repeat object-cover rounded-lg"
             style="background-image: url('./assets/projects/studio.webp')"
           ></div>
         </div>
-        <div class="p-5 flex flex-col space-y-4">
-          <h1 class="text-3xl font-bold">Natural Building</h1>
+        <div class="p-5 flex flex-col space-y-4 w-screen md:w-auto">
+          <h1 class="text-3xl font-bold mt-10 md:mt-0">Natural Building</h1>
           <p class="text-xl">
             Natural buildings are more than just structures; they're captivating
             expressions of creativity that effortlessly blend human innovation
@@ -186,17 +187,17 @@
         </div>
       </section>
 
-      <div class="pt-40 md:pt-60 pb-32 relative">
+      <div class="pt-20 md:pt-40 md:pt-60 pb-32 relative">
         <div
           class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat object-cover bg-fixed brightness-[.6]"
           style="background-image: url('./assets/bg.webp')"
         ></div>
       </div>
 
-      <section id="workshops" class="flex flex-col p-10 mb-10 items-center">
+      <section id="workshops" class="flex flex-col py-10 px-4 md:p-10 mb-10 items-center">
         <h1 class="section-header text-5xl font-extrabold">Workshops</h1>
         <div
-          class="carousel mx-auto my-10 w-full h-[350px] md:w-[70%] md:h-[500px] md:rounded-lg overflow-hidden bg-cover bg-center bg-no-repeat object-cover rounded-lg"
+          class="carousel mx-auto my-10 w-full h-[250px] w-full md:w-[70%] md:h-[500px] md:rounded-lg overflow-hidden bg-cover bg-center bg-no-repeat object-cover rounded-lg"
           data-flickity='{ 
             "autoPlay": 2000, 
             "pageDots": false, 
@@ -205,31 +206,31 @@
         }'
         >
           <div
-            class="carousel-cell w-full h-full"
+            class="carousel-cell w-full h-full object-cover"
             style="
               background: url('./assets/workshop/workshop-1.webp') center/cover;
             "
           ></div>
           <div
-            class="carousel-cell w-full h-full"
+            class="carousel-cell w-full h-full object-cover"
             style="
               background: url('./assets/workshop/workshop-2.webp') center/cover;
             "
           ></div>
           <div
-            class="carousel-cell w-full h-full"
+            class="carousel-cell w-full h-full object-cover"
             style="
               background: url('./assets/workshop/workshop-3.webp') center/cover;
             "
           ></div>
           <div
-            class="carousel-cell w-full h-full"
+            class="carousel-cell w-full h-full object-cover"
             style="
               background: url('./assets/workshop/workshop-4.webp') center/cover;
             "
           ></div>
           <div
-            class="carousel-cell w-full h-full"
+            class="carousel-cell w-full h-full object-cover"
             style="
               background: url('./assets/workshop/workshop-5.webp') center/cover;
             "
@@ -249,7 +250,7 @@
       <section id="projects" class="flex flex-col p-10 items-center">
         <h1 class="section-header text-5xl font-extrabold mb-10">Projects</h1>
         <div
-          class="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 space-x-10 xl:space-x-20 items-center space-y-10 h-[1200px] md:h-[calc(100vh-200px)] xl:w-[70%] w-full overflow-hidden"
+          class="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 md:space-x-10 xl:space-x-20 items-center space-y-10 h-[1200px] md:h-[calc(100vh-200px)] xl:w-[70%] w-screen p-4 overflow-hidden"
         >
           <div
             class="flex items-center justify-center flex-col row-start-1 row-end-2 col-start-1 col-end-2 md:row-start-1 md:row-end-3 md:col-start-1 md:col-end-2 w-full h-full"
@@ -263,7 +264,7 @@
             <h1 class="text-2xl mt-3">Studio Eos</h1>
           </div>
           <div
-            class="flex items-center justify-center flex-col row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 w-full h-full py-10"
+            class="flex items-center justify-center flex-col row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 w-full h-full md:py-10"
           >
             <div
               style="
@@ -374,7 +375,7 @@
       </section>
 
       <section class="testimonials" oncontextmenu="return false;">
-        <iframe src="./testimonials.html" class="w-full h-[500px]"></iframe>
+        <iframe title="testimonials" src="./testimonials.html" class="w-full h-[930px] md:h-[600px]"></iframe>
       </section>
 
       <section
@@ -382,24 +383,34 @@
         class="flex flex-col p-10 items-center bg-[#475c4e] text-white p-20"
       >
         <h1 class="section-header text-5xl font-extrabold mb-10">Contact Us</h1>
-        <div class="flex justify-between w-[70%]">
+        <div class="flex flex-col md:flex-row items-center justify-between w-[70%]">
           <div class="flex flex-col text-2xl">
-            <div class="flex items-center">
+            <div class="flex justify-center items-center">
               <img src="./assets/socials/ig.webp" class="w-20" alt="" />
               <a href="https://www.instagram.com/eosdesign.studio/"
                 >@eosdeign.studio</a
               >
             </div>
-            <div class="flex items-center">
+            <div class="flex justify-center items-center">
               <img src="./assets/socials/wa.webp" class="w-20" alt="" />
-              <p>+91 9509028478</p>
+              <p>+919509028478</p>
             </div>
           </div>
           <div class="flex flex-col text-2xl items-center justify-center">
-            <p class="text-lg">Do you have a query? Reach out to us on</p>
-            <a href="mailto:info@esodesignstudio.in" class="underline text-2xl mb-3">info@esodesignstudio.in</a>
-            <p class="text-lg">Do you have a zero cement project? Reach out to us on</p>
-            <a href="mailto:work@eosdesignstudio.in" class="underline text-2xl mb-3">work@eosdesignstudio.in</a>
+            <p class="text-lg mt-10 md:mt-0">Do you have a query? Reach out to us on</p>
+            <a
+              href="mailto:info@esodesignstudio.in"
+              class="underline text-2xl mb-10 md:mb-3"
+              >info@esodesignstudio.in</a
+            >
+            <p class="text-lg">
+              Do you have a zero cement project? Reach out to us on
+            </p>
+            <a
+              href="mailto:work@eosdesignstudio.in"
+              class="underline text-2xl mb-3"
+              >work@eosdesignstudio.in</a
+            >
           </div>
         </div>
       </section>
