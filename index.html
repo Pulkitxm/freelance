@@ -54,7 +54,7 @@
         class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4 md:pr-10 pr-10"
       >
         <a
-        href="#"
+          href="#"
           class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer"
           id="logo"
         >
@@ -85,9 +85,9 @@
             />
           </svg>
         </button>
-        <div class="hidden w-full lg:block md:w-auto" id="navbar-dropdown">
+        <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
           <ul
-            class="nav-items flex flex-col font-medium p-4 md:p-0 mt-4 border-t border-gray-100 bg-[#d69f7e] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-g[#d69f7e] md:dark:bg-[#d69f7e] dark:border-gray-700"
+            class="nav-items flex flex-col font-medium p-4 lg:p-0 mt-4 border-t border-gray-100 bg-[#d69f7e] lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white dark:bg-g[#d69f7e] lg:dark:bg-[#d69f7e] dark:border-gray-700"
           >
             <li data-section="hero-section">
               <a
@@ -196,7 +196,7 @@
         </div>
       </section>
 
-      <div class="pt-20 md:pt-40 md:pt-60 pb-32 relative">
+      <div class="pt-20 md:pt-40 md:pt-60 pb-24 relative">
         <div
           class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat object-cover bg-fixed brightness-[.6]"
           style="background-image: url('./assets/bg.webp')"
@@ -379,12 +379,97 @@
           style="background-image: url('./assets/community/community.webp')"
         ></div>
         <div
-          class="absolute inset-0 flex flex-col justify-center text-white text-2xl p-5"
+          class="absolute top-[50%] inset-0 inline-flex flex-col text-white text-2xl p-5 bg-white text-black py-10 translate-y-[-50%] w-full md:w-[400px] md:ml-5 md:rounded-xl"
         >
-          <p>Join our community of natural builders</p>
-          <p>and be part of the change you wish to see in the world.</p>
+          <h1
+            class="section-header text-4xl font-extrabold text-black text-center"
+          >
+            Meet the team
+          </h1>
+          <div class="flex flex-col w-full">
+            <div class="flex m-5">
+              <div
+                class="flex items-center justify-center flex-col w-full h-full team-member"
+                data-name="Saumya Grover"
+              >
+                <img
+                  src="./assets/team/Saumya Grover.webp"
+                  class="w-24 h-24 object-cover rounded-full cursor-pointer"
+                  alt="Saumya Grover"
+                />
+                <p class="text-black text-xl font-semibold">Saumya Grover</p>
+              </div>
+              <div
+                class="flex items-center justify-center flex-col w-full h-full team-member"
+                data-name="Shad Fatima"
+              >
+                <img
+                  src="./assets/team/Shad Fatima,.webp"
+                  class="w-24 h-24 object-cover rounded-full cursor-pointer"
+                  alt="Shad Fatima"
+                />
+                <p class="text-black text-xl font-semibold">Shad Fatima</p>
+              </div>
+            </div>
+            <div class="flex m-5">
+              <div
+                class="flex items-center justify-center flex-col w-full h-full team-member"
+                data-name="Vaageesha Singh"
+              >
+                <img
+                  src="./assets/team/Vaageesha Singh.webp"
+                  class="w-24 h-24 object-cover rounded-full cursor-pointer"
+                  alt="Vaageesha Singh"
+                />
+                <p class="text-black text-xl font-semibold">Vaageesha Singh</p>
+              </div>
+              <div
+                class="flex items-center justify-center flex-col w-full h-full team-member"
+                data-name="Yuvraj Naruka"
+              >
+                <img
+                  src="./assets/team/Yuvraj Naruka.webp"
+                  class="w-24 h-24 object-cover rounded-full cursor-pointer"
+                  alt="Yuvraj Naruka"
+                />
+                <p class="text-black text-xl font-semibold">Yuvraj Naruka</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <div
+        id="show-team-member"
+        class="w-screen h-screen fixed top-0 left-0 z-50 bg-[#00000059] flex justify-center items-center hidden"
+      >
+        <div
+        id="team-member-popup"
+          class="w-full md:w-[60%] h-[60%] bg-white flex flex-col md:flex-row rounded-xl overflow-hidden"
+        >
+          <svg
+            fill="none"
+            id="close-team-member-popup"
+            viewBox="0 0 15 15"
+            class="w-12 h-12 cursor-pointer absolute top-0 right-0 m-5"
+          >
+            <path
+              fill="white"
+              fillRule="evenodd"
+              d="M11.782 4.032a.575.575 0 10-.813-.814L7.5 6.687 4.032 3.218a.575.575 0 00-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 00.814.814L7.5 8.313l3.469 3.469a.575.575 0 00.813-.814L8.313 7.5l3.469-3.468z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <img
+            class="w-full h-[50%] md:h-full md:w-[50%] object-cover"
+            alt="logo"
+          />
+          <div
+            class="w-full h-[50%] md:h-full md:w-[50%] text-black flex items-center justify-center"
+          >
+            <p class="text-center p-2 text-lg md:text-xl"></p>
+          </div>
+        </div>
+      </div>
 
       <section class="testimonials" oncontextmenu="return false;">
         <iframe
