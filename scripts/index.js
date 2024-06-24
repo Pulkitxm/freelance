@@ -34,7 +34,13 @@ const teamMemberModal = document.getElementById("show-team-member");
 teamMembers.forEach((member) => {
   member.addEventListener("click", () => {
     const name = member.getAttribute("data-name");
+    const isTop= member.getAttribute("data-top");
     teamMemberModal.classList.remove("hidden");
+    if (isTop === "true"){
+      teamMemberModal.querySelector("img").classList.add("object-top");
+    } else{
+      teamMemberModal.querySelector("img").classList.remove("object-top");
+    }
     teamMemberModal.querySelector("img").src = member.querySelector("img").src;
     teamMemberModal.querySelector("p").textContent = desc.find(
       (d) => d.name === name
