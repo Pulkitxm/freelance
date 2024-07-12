@@ -6,8 +6,8 @@
       "dest": "/projects.html"
     },
     {
-      "src": "/(.*)",
-      "status": 404
+      "src": "/workshops",
+      "dest": "/workshops.html"
     }
   ]
 }

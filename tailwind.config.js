@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       screens: {
         xs: "320px",
+        xs2: "400px",
       },
     },
   },
@@ -36,6 +37,7 @@ module.exports = {
     function ({ addBase }) {
       addBase({
         html: { scrollBehavior: "smooth" },
+        img: { pointerEvents: "none" },
       });
     },
   ],
