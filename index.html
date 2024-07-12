@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Eos-Architecture - Natural Building Design Studio</title>
-    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta
       name="description"
@@ -35,17 +35,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
   </head>
 
   <body class="bg-[#f6f6f6]">
-    <nav
-      class="fixed top-0 w-screen z-50 bg-white border-[#d69f7e] dark:bg-[#d69f7e] dark:border-[#d69f7e]"
-    >
+    <nav class="fixed top-0 w-screen z-50 bg-[#d69f7e]">
       <div
         class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4 md:pr-10 pr-10"
       >
@@ -111,7 +104,7 @@
             </li>
             <li data-section="projects">
               <a
-                href="#projects"
+                href="/projects.html"
                 style="font-family: 'Bodoni Moda', cursive"
                 class="block py-2 px-3 text-gray-900 rounded text-xl opacity-50 hover:opacity-100 transition-opacity duration-300 font-bold md:hover:bg-transparent md:border-0 md:p-0 nav-link"
                 >Projects</a
@@ -192,107 +185,12 @@
         </div>
       </section>
 
-      <div class="pt-20 md:pt-40 md:pt-60 pb-24 relative">
+      <div class="pt-20 md:pt-40 pb-24 relative">
         <div
           class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat object-cover bg-fixed brightness-[.6]"
           style="background-image: url('./assets/bg.webp')"
         ></div>
       </div>
-
-      <section
-        id="workshops"
-        class="flex flex-col py-10 px-4 md:p-10 mb-10 items-center"
-      >
-        <h1 class="section-header text-5xl font-extrabold">Workshops</h1>
-        <div
-          class="carousel mx-auto my-10 w-full h-[250px] w-full md:w-[70%] md:h-[500px] md:rounded-lg overflow-hidden bg-cover bg-center bg-no-repeat object-cover rounded-lg"
-          data-flickity='{ 
-            "autoPlay": 2000, 
-            "pageDots": false, 
-            "prevNextButtons": false,
-            "wrapAround": true
-        }'
-        >
-          <div
-            class="carousel-cell w-full h-full object-cover"
-            style="
-              background: url('./assets/workshop/workshop-1.webp') center/cover;
-            "
-          ></div>
-          <div
-            class="carousel-cell w-full h-full object-cover"
-            style="
-              background: url('./assets/workshop/workshop-2.webp') center/cover;
-            "
-          ></div>
-          <div
-            class="carousel-cell w-full h-full object-cover"
-            style="
-              background: url('./assets/workshop/workshop-3.webp') center/cover;
-            "
-          ></div>
-          <div
-            class="carousel-cell w-full h-full object-cover"
-            style="
-              background: url('./assets/workshop/workshop-4.webp') center/cover;
-            "
-          ></div>
-          <div
-            class="carousel-cell w-full h-full object-cover"
-            style="
-              background: url('./assets/workshop/workshop-5.webp') center/cover;
-            "
-          ></div>
-        </div>
-        <p class="text-xl mx-auto w-full md:w-[70%] text-center">
-          Join us for workshops suitable for all levels of experience in natural
-          building, whether you're just starting out or already skilled in the
-          craft. Our sessions blend theory and practical learning in a way
-          that's engaging and accessible to everyone. With a commitment to
-          innovation, we continually experiment and refine our workshops,
-          ensuring each one offers something new and enriching for participants
-          to explore.
-        </p>
-      </section>
-
-      <section id="projects" class="flex flex-col p-10 items-center">
-        <h1 class="section-header text-5xl font-extrabold mb-10">Projects</h1>
-        <div
-          class="grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 md:space-x-10 xl:space-x-20 items-center space-y-10 h-[1200px] md:h-[calc(100vh-200px)] xl:w-[70%] w-screen p-4 overflow-hidden"
-        >
-          <div
-            class="flex items-center justify-center flex-col row-start-1 row-end-2 col-start-1 col-end-2 md:row-start-1 md:row-end-3 md:col-start-1 md:col-end-2 w-full h-full"
-          >
-            <div
-              style="
-                background-image: url('./assets/projects/proj-studio.webp');
-              "
-              class="w-full h-full bg-cover bg-center bg-no-repeat object-cover rounded-lg"
-            ></div>
-            <h1 class="text-2xl mt-3">Studio Eos</h1>
-          </div>
-          <div
-            class="flex items-center justify-center flex-col row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3 w-full h-full md:py-10"
-          >
-            <div
-              style="
-                background-image: url('./assets/projects/Ashreya Sketch.webp');
-              "
-              class="w-full h-full bg-cover bg-center bg-no-repeat object-cover rounded-lg"
-            ></div>
-            <h1 class="text-2xl">Ashreya at Yaksha Forest garden</h1>
-          </div>
-          <div
-            class="flex items-center justify-center flex-col row-end-4 col-start-1 col-end-2 md:row-start-2 md:row-end-3 md:col-start-2 md:col-end-3 w-full h-full"
-          >
-            <div
-              style="background-image: url('./assets/projects/studio.webp')"
-              class="w-full h-full bg-cover bg-center bg-no-repeat object-cover rounded-lg"
-            ></div>
-            <h1 class="text-2xl">NeemBagh Cafe</h1>
-          </div>
-        </div>
-      </section>
 
       <section id="community" class="flex flex-col p-10 items-center">
         <h1 class="section-header text-5xl font-extrabold mb-10">Community</h1>
@@ -369,86 +267,89 @@
         </div>
       </section>
 
-      <section id="meet-the-team" class="h-screen relative">
+      <section id="meet-the-team" class="relative">
         <div
-          class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat object-cover bg-fixed brightness-[.6]"
+          class="flex items-center relative w-full h-full bg-cover bg-center bg-no-repeat bg-fixed before:absolute before:inset-0 before:bg-black before:opacity-50 before:z-0"
           style="background-image: url('./assets/community/community.webp')"
-        ></div>
-        <div
-          class="absolute top-[50%] inset-0 inline-flex flex-col text-white text-2xl p-5 bg-white text-black py-10 translate-y-[-50%] max-w-full md:max-w-[300px] xl:max-w-[350px] md:ml-5 md:rounded-xl"
         >
-          <h1
-            class="section-header text-4xl font-extrabold text-black text-center"
-          >
-            Meet the team
-          </h1>
-          <div class="flex flex-col w-full h-full">
-            <div class="flex m-5 h-[50%]">
-              <div
-                class="flex items-center justify-center flex-col w-full h-full team-member"
-                data-name="Saumya Grover"
-                data-top="true"
+          <div class="relative z-10 py-40 ">
+            <div
+              class="inset-0 inline-flex flex-col text-2xl p-5 bg-white text-black py-10 w-screen xs:max-w-[300px] xl:max-w-[350px] md:ml-5 xs:rounded-lg md:rounded-xl xs:ml-5"
+            >
+              <h1
+                class="section-header text-4xl font-extrabold text-black text-center"
               >
-                <img
-                  src="./assets/team/Saumya Grover.webp"
-                  class="w-16 h-16 xl:w-20 xl:h-20 object-cover rounded-full cursor-pointer object-top"
-                  alt="Saumya Grover"
-                />
-                <p
-                  class="text-black text-base xl:text-xl text-center font-semibold"
-                >
-                  Saumya Grover
-                </p>
-              </div>
-              <div
-                class="flex items-center justify-center flex-col w-full h-full team-member"
-                data-name="Nandita Gupta"
-                data-top="false"
-              >
-                <img
-                  src="./assets/team/Nandita Gupta.JPG"
-                  class="w-16 h-16 xl:w-20 xl:h-20 object-cover rounded-full cursor-pointer object-top"
-                  alt="Nandita Gupta"
-                />
-                <p
-                  class="text-black text-base xl:text-xl text-center font-semibold"
-                >
-                  Nandita Gupta
-                </p>
-              </div>
-            </div>
-            <div class="flex m-5 h-[50%]">
-              <div
-                class="flex items-center justify-center flex-col w-full h-full team-member"
-                data-name="Vaageesha Singh"
-                data-top="false"
-              >
-                <img
-                  src="./assets/team/Vaageesha Singh.webp"
-                  class="w-16 h-16 xl:w-20 xl:h-20 object-cover rounded-full cursor-pointer object-top"
-                  alt="Vaageesha Singh"
-                />
-                <p
-                  class="text-black text-base xl:text-xl text-center font-semibold"
-                >
-                  Vaageesha Singh
-                </p>
-              </div>
-              <div
-                class="flex items-center justify-center flex-col w-full h-full team-member"
-                data-name="Yuvraj Naruka"
-                data-top="false"
-              >
-                <img
-                  src="./assets/team/Yuvraj Naruka.webp"
-                  class="w-16 h-16 xl:w-20 xl:h-20 object-cover rounded-full cursor-pointer object-top"
-                  alt="Yuvraj Naruka"
-                />
-                <p
-                  class="text-black text-base xl:text-xl text-center font-semibold"
-                >
-                  Yuvraj Naruka
-                </p>
+                Meet the team
+              </h1>
+              <div class="flex flex-col w-full h-full">
+                <div class="flex m-5 h-[50%]">
+                  <div
+                    class="flex items-center justify-center flex-col w-full h-full team-member"
+                    data-name="Saumya Grover"
+                    data-top="true"
+                  >
+                    <img
+                      src="./assets/team/Saumya Grover.webp"
+                      class="w-16 h-16 xl:w-20 xl:h-20 object-cover rounded-full cursor-pointer object-top"
+                      alt="Saumya Grover"
+                    />
+                    <p
+                      class="text-black text-base xl:text-xl text-center font-semibold"
+                    >
+                      Saumya Grover
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center justify-center flex-col w-full h-full team-member"
+                    data-name="Nandita Gupta"
+                    data-top="false"
+                  >
+                    <img
+                      src="./assets/team/Nandita Gupta.JPG"
+                      class="w-16 h-16 xl:w-20 xl:h-20 object-cover rounded-full cursor-pointer object-top"
+                      alt="Nandita Gupta"
+                    />
+                    <p
+                      class="text-black text-base xl:text-xl text-center font-semibold"
+                    >
+                      Nandita Gupta
+                    </p>
+                  </div>
+                </div>
+                <div class="flex m-5 h-[50%]">
+                  <div
+                    class="flex items-center justify-center flex-col w-full h-full team-member"
+                    data-name="Vaageesha Singh"
+                    data-top="false"
+                  >
+                    <img
+                      src="./assets/team/Vaageesha Singh.webp"
+                      class="w-16 h-16 xl:w-20 xl:h-20 object-cover rounded-full cursor-pointer object-top"
+                      alt="Vaageesha Singh"
+                    />
+                    <p
+                      class="text-black text-base xl:text-xl text-center font-semibold"
+                    >
+                      Vaageesha Singh
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center justify-center flex-col w-full h-full team-member"
+                    data-name="Yuvraj Naruka"
+                    data-top="false"
+                  >
+                    <img
+                      src="./assets/team/Yuvraj Naruka.webp"
+                      class="w-16 h-16 xl:w-20 xl:h-20 object-cover rounded-full cursor-pointer object-top"
+                      alt="Yuvraj Naruka"
+                    />
+                    <p
+                      class="text-black text-base xl:text-xl text-center font-semibold"
+                    >
+                      Yuvraj Naruka
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -460,13 +361,13 @@
       >
         <div
           id="team-member-popup"
-          class="w-full md:w-[60%] h-[60%] bg-white flex flex-col md:flex-row rounded-xl overflow-hidden"
+          class="w-full md:w-[60%] h-[80%] md:h-[60%] bg-white flex flex-col md:flex-row md:rounded-xl overflow-hidden"
         >
           <svg
             fill="none"
             id="close-team-member-popup"
             viewBox="0 0 15 15"
-            class="w-16 h-16 xl:w-22 xl:h-22 cursor-pointer absolute top-0 right-0 m-5"
+            class="w-12 h-12 md:w-16 md:h-16 xl:w-22 xl:h-22 cursor-pointer absolute top-0 right-0 m-5"
           >
             <path
               fill="white"
@@ -480,9 +381,9 @@
             alt="logo"
           />
           <div
-            class="w-full md:h-[50%] md:h-full md:w-[50%] text-black flex items-center justify-center"
+            class="w-full h-full md:w-[50%] text-black flex items-center justify-center"
           >
-            <p class="text-center mb-10 px-2 text-lg md:text-xl"></p>
+            <p class="text-center mb-10 px-2 text-md md:text-xl"></p>
           </div>
         </div>
       </div>
@@ -497,7 +398,7 @@
 
       <section
         id="contact"
-        class="flex flex-col p-10 items-center bg-[#475c4e] text-white p-20"
+        class="flex flex-col p-10 items-center bg-[#475c4e] text-white"
       >
         <h1 class="section-header text-5xl font-extrabold mb-10">Contact Us</h1>
         <div

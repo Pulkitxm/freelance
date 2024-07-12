@@ -34,11 +34,11 @@ const teamMemberModal = document.getElementById("show-team-member");
 teamMembers.forEach((member) => {
   member.addEventListener("click", () => {
     const name = member.getAttribute("data-name");
-    const isTop= member.getAttribute("data-top");
+    const isTop = member.getAttribute("data-top");
     teamMemberModal.classList.remove("hidden");
-    if (isTop === "true"){
+    if (isTop === "true") {
       teamMemberModal.querySelector("img").classList.add("object-top");
-    } else{
+    } else {
       teamMemberModal.querySelector("img").classList.remove("object-top");
     }
     teamMemberModal.querySelector("img").src = member.querySelector("img").src;
@@ -49,6 +49,12 @@ teamMembers.forEach((member) => {
 });
 
 const closeModalButton = document.getElementById("close-team-member-popup");
-closeModalButton.addEventListener("click", () => {
-  teamMemberModal.classList.add("hidden");
+closeModalButton &&
+  closeModalButton.addEventListener("click", () => {
+    teamMemberModal.classList.add("hidden");
+  });
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    teamMemberModal.classList.add("hidden");
+  }
 });

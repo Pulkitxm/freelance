@@ -1,7 +1,7 @@
 const desc = [
   {
     name: "Saumya Grover",
-    desc: "Meet Saumya Grover, the visionary behind EOS. As an architect driven by a passion for sustainability, she specializes in zero cement projects, dedicated to minimizing carbon footprints. With expertise in designing stunning natural buildings using mud, stone, and lime, she brings eco-consciousness to architectural excellence.",
+    desc: "Meet Saumya Grover, the founder and the visionary behind EOS. As an architect driven by a passion for sustainability, she specializes in zero cement projects, dedicated to minimizing carbon footprints. With expertise in designing stunning natural buildings using mud, stone, and lime, she brings eco-consciousness to architectural excellence.",
   },
   {
     name: "Nandita Gupta",
