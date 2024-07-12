@@ -839,16 +839,12 @@ html {
   margin-top: 0.5rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
 }
 
 .box-border {
@@ -970,10 +966,6 @@ html {
   height: 1.25rem;
 }
 
-.h-\[1200px\] {
-  height: 1200px;
-}
-
 .h-\[1500px\] {
   height: 1500px;
 }
@@ -1004,22 +996,6 @@ html {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[5\] {
-  height: 5;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
-.h-auto {
-  height: auto;
-}
-
-.h-\[672px\] {
-  height: 672px;
 }
 
 .w-10 {
@@ -1070,30 +1046,6 @@ html {
   width: 100vw;
 }
 
-.w-\[90vw\] {
-  width: 90vw;
-}
-
-.w-\[60vw\] {
-  width: 60vw;
-}
-
-.w-\[80vw\] {
-  width: 80vw;
-}
-
-.w-\[50vw\] {
-  width: 50vw;
-}
-
-.w-\[1110px\] {
-  width: 1110px;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1132,18 +1084,6 @@ html {
 
 .border-separate {
   border-collapse: separate;
-}
-
-.scale-75 {
-  --tw-scale-x: .75;
-  --tw-scale-y: .75;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-50 {
-  --tw-scale-x: .5;
-  --tw-scale-y: .5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .\!transform {
@@ -1448,10 +1388,6 @@ html {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
 .grid-rows-5 {
   grid-template-rows: repeat(5, minmax(0, 1fr));
 }
@@ -1650,12 +1586,6 @@ html {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2506,6 +2436,22 @@ html {
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
+.leading-\[400px\] {
+  line-height: 400px;
+}
+
+.leading-\[40px\] {
+  line-height: 40px;
+}
+
+.leading-loose {
+  line-height: 2;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
+}
+
 .text-\[\#336699\]\/\[\.35\] {
   color: rgb(51 102 153 / .35);
 }
@@ -3155,14 +3101,6 @@ html {
     width: auto;
   }
 
-  .md\:w-\[\] {
-    width: ;
-  }
-
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3173,12 +3111,6 @@ html {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:rounded-lg {
@@ -3203,11 +3135,6 @@ html {
 
   .md\:p-5 {
     padding: 1.25rem;
-  }
-
-  .md\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
   }
 
   .md\:pr-10 {
@@ -3241,16 +3168,16 @@ html {
     display: none;
   }
 
-  .lg\:w-auto {
-    width: auto;
-  }
-
-  .lg\:w-\[60\] {
-    width: 60;
-  }
-
   .lg\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .lg\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:flex-row {
@@ -3275,6 +3202,15 @@ html {
   .lg\:p-0 {
     padding: 0px;
   }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:font-extrabold {
+    font-weight: 800;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -3290,26 +3226,16 @@ html {
     width: 70%;
   }
 
-  .xl\:w-\[400px\] {
-    width: 400px;
-  }
-
   .xl\:w-\[700px\] {
     width: 700px;
   }
 
-  .xl\:w-\[100px\] {
-    width: 100px;
+  .xl\:w-\[720px\] {
+    width: 720px;
   }
 
   .xl\:max-w-\[350px\] {
     max-width: 350px;
-  }
-
-  .xl\:space-x-20 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(5rem * var(--tw-space-x-reverse));
-    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .xl\:text-xl {
