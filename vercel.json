@@ -8,6 +8,10 @@
     {
       "src": "/workshops",
       "dest": "/workshops.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
     }
   ]
 }
