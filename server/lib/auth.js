@@ -7,3 +7,7 @@ export function getToken(username, password) {
   }
   return jwt.sign({ username, password }, JWT_SECRET);
 }
+
+export function decodeToken(token) {
+  return jwt.verify(token, JWT_SECRET);
+}

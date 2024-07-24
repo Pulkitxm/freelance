@@ -1,5 +1,12 @@
 import User from "../models/user.js";
 
+export async function getUserByIdFromUsernameOrEmail(field) {
+  return await User.findOne(
+    { $or: [{ username: field }, { email: field }] },
+    { _id: 1 }
+  );
+}
+
 export async function createUser({ username, email, password }) {
   if (!username || !email || !password) {
     throw new Error("Please provide all fields");
@@ -11,7 +18,7 @@ export async function createUser({ username, email, password }) {
 export async function getUserAnyByUsernameorEmail(field) {
   return await User.findOne(
     { $or: [{ username: field }, { email: field }] },
-    { _id: 1 }
+    { username: 1, email: 1, _id: 1, onBoarded: 1 }
   );
 }
 
@@ -28,4 +35,16 @@ export async function verifyUser(field, password) {
     $or: [{ username: field }, { email: field }],
   });
   return user.password === password ? user : null;
+}
+
+export async function getUserById(id) {
+  return await User.findById(id, {
+    username: 1,
+    email: 1,
+    _id: 0,
+  });
+}
+
+export async function updateUserOnBoarded(id) {
+  return await User.findByIdAndUpdate(id, { onBoarded: true });
 }

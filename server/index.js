@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5174",
     credentials: true,
   })
 );
@@ -21,6 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, async () => {
+  console.log("Connecting to database...", DATABASE_URL);
   await mongoose.connect(DATABASE_URL);
   console.log("Server is running on http://localhost:" + PORT);
 });

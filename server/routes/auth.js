@@ -61,6 +61,8 @@ authRouter.post("/login", async (req, res) => {
     message: "Login successful",
     username: isVerified.username,
     email: isVerified.email,
+    onBoarded: isVerified.onBoarded,
+    id: isVerified._id,
   });
 });
 

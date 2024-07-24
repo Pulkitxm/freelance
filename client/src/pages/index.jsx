@@ -4,6 +4,7 @@ import Login from "./Login";
 import Register from "./Register";
 import Dashboard from "./Dashboard";
 import Navbar from "../components/Navbar";
+import OnBoarding from "./OnBoarding";
 
 export default function Pages() {
   return (
@@ -14,6 +15,7 @@ export default function Pages() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/onboarding" element={<OnBoarding />} />
       </Routes>
     </>
   );

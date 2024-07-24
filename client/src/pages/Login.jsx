@@ -1,9 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../lib/auth";
 import { toast } from "react-hot-toast";
+import { useSetRecoilState } from "recoil";
+import { userState } from "../state/user";
 
 export default function Login() {
   const navigate = useNavigate();
+  const setUser = useSetRecoilState(userState);
   function handleLogin(e) {
     e.preventDefault();
     const formData = {
@@ -13,8 +16,15 @@ export default function Login() {
 
     toast.promise(loginUser(formData), {
       loading: "Logging in...",
-      success: () => {
-        navigate("/dashboard");
+      success: (data) => {
+        setUser({
+          id: data.id,
+          username: data.username,
+          email: data.email,
+          onBoarded: data.onBoarded,
+        });
+        const onBoarded = data.onBoarded;
+        navigate(onBoarded ? "/dashboard" : "/onboarding");
         return "Login successful";
       },
       error: (error) => {
