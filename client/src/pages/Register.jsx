@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { registerUser } from "../lib/auth";
 
 export default function Register() {
+  const navigate = useNavigate();
 
   function handleRegister(e) {
     e.preventDefault();
@@ -15,6 +16,7 @@ export default function Register() {
     toast.promise(registerUser(formData), {
       loading: "Registering...",
       success: () => {
+        navigate("/login");
         return "Registered successfully";
       },
       error: (error) => {

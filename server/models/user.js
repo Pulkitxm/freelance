@@ -16,6 +16,10 @@ const userSchema = Schema({
     required: true,
     min: 6,
   },
+  onBoarded: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 export default model("User", userSchema);

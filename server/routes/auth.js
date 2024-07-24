@@ -1,7 +1,7 @@
 import { Router } from "express";
 import {
   createUser,
-  getUserByUsernameAndEmail,
+  getUserAnyByUsernameorEmail,
   getUserByUsernameorEmail,
   verifyUser,
 } from "../db/user.js";
@@ -17,7 +17,7 @@ authRouter.post("/register", async (req, res) => {
   }
 
   try {
-    const userExists = await getUserByUsernameAndEmail(username, email);
+    const userExists = await getUserByUsernameorEmail(username, email);
 
     if (userExists) {
       return res.status(409).json({ message: "User already existas" });
@@ -41,7 +41,7 @@ authRouter.post("/login", async (req, res) => {
 
   const field = username || email;
 
-  const userExists = await getUserByUsernameorEmail(field);
+  const userExists = await getUserAnyByUsernameorEmail(field);
 
   if (!userExists) {
     return res.status(404).json({ message: "User not found" });

@@ -8,18 +8,19 @@ export async function createUser({ username, email, password }) {
   return dbUser._id;
 }
 
-export async function getUserByUsernameorEmail(field) {
+export async function getUserAnyByUsernameorEmail(field) {
   return await User.findOne(
     { $or: [{ username: field }, { email: field }] },
     { _id: 1 }
   );
 }
 
-export async function getUserByUsernameAndEmail(field) {
-  return await User.findOne(
-    { $and: [{ username: field }, { email: field }] },
-    { _id: 1 }
-  );
+export async function getUserByUsernameorEmail(username, email) {
+  return await User.findOne({ $or: [{ username }, { email }] }, { _id: 1 });
+}
+
+export async function getUserByUsernameAndEmail(username, email) {
+  return await User.findOne({ $and: [{ username }, { email }] }, { _id: 1 });
 }
 
 export async function verifyUser(field, password) {
